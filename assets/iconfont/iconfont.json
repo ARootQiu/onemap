@@ -1,0 +1,156 @@
+{
+  "id": "4233911",
+  "name": "Geowindows 时空大数据一张图",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7594875",
+      "name": "24gf-folderOpen",
+      "font_class": "gf-folderOpen",
+      "unicode": "eac5",
+      "unicode_decimal": 60101
+    },
+    {
+      "icon_id": "8361844",
+      "name": "眼睛3",
+      "font_class": "yanjing",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "8361861",
+      "name": "眼睛4",
+      "font_class": "yanjing1",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "35172484",
+      "name": "重叠",
+      "font_class": "zhongdie",
+      "unicode": "e868",
+      "unicode_decimal": 59496
+    },
+    {
+      "icon_id": "4936983",
+      "name": "windows-fill",
+      "font_class": "windows-fill",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "1370251",
+      "name": "地图-缓冲区分析",
+      "font_class": "icon-chongdie",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "7873345",
+      "name": "等高线",
+      "font_class": "denggaoxian",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "17581907",
+      "name": "天际线分析",
+      "font_class": "tianjixianfenxi",
+      "unicode": "ec81",
+      "unicode_decimal": 60545
+    },
+    {
+      "icon_id": "18798951",
+      "name": "剖切",
+      "font_class": "pouqie",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "19668957",
+      "name": "高度",
+      "font_class": "colum-height",
+      "unicode": "eafe",
+      "unicode_decimal": 60158
+    },
+    {
+      "icon_id": "20650048",
+      "name": "绿地",
+      "font_class": "lvdi",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "31229435",
+      "name": "可视域分析",
+      "font_class": "keshiyufenxi",
+      "unicode": "e765",
+      "unicode_decimal": 59237
+    },
+    {
+      "icon_id": "35253119",
+      "name": "-_坡度标注",
+      "font_class": "-_podubiaozhu",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "1259",
+      "name": "位置",
+      "font_class": "weizhi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "577366",
+      "name": "搜索类目-fill",
+      "font_class": "sousuoleimufill",
+      "unicode": "e753",
+      "unicode_decimal": 59219
+    },
+    {
+      "icon_id": "1167160",
+      "name": "工具箱",
+      "font_class": "gongjuxiang",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "5838754",
+      "name": "对比",
+      "font_class": "duibi",
+      "unicode": "e866",
+      "unicode_decimal": 59494
+    },
+    {
+      "icon_id": "6066791",
+      "name": "对比源",
+      "font_class": "ico-",
+      "unicode": "e80e",
+      "unicode_decimal": 59406
+    },
+    {
+      "icon_id": "11200646",
+      "name": "图层",
+      "font_class": "layers",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "30726681",
+      "name": "ic-huanchong",
+      "font_class": "ic-huanchong",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "35432558",
+      "name": "行政区划",
+      "font_class": "hangzhengquhua",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}

@@ -1,0 +1,1797 @@
+[
+	{
+		"pId": 0,
+		"name": "基础地理信息数据",
+		"id": 1,
+		"nocheck": true
+	},
+	{
+		"pId": 1,
+		"name": "矢量瓦片",
+		"id": 3,
+		"layerid": "mp_vector",
+		"type": "vector",
+		"style": "data/streets.json"
+	},
+	{
+		"pId": 1,
+		"name": "天地图",
+		"id": 4,
+		"nocheck": true
+	},
+	{
+		"pId": 4,
+		"name": "矢量",
+		"id": 10007,
+		"type": "raster",
+		"layerid": "map"
+	},
+	{
+		"pId": 4,
+		"name": "矢量注记",
+		"id": 10008,
+		"type": "raster",
+		"layerid": "maplabel"
+	},
+	{
+		"pId": 4,
+		"name": "影像",
+		"id": 10009,
+		"type": "raster",
+		"layerid": "sate"
+	},
+	{
+		"pId": 4,
+		"name": "影像注记",
+		"id": 10010,
+		"type": "raster",
+		"layerid": "satelabel"
+	},
+	{
+		"pId": 4,
+		"name": "地形",
+		"id": 10011,
+		"type": "raster",
+		"layerid": "dixing"
+	},
+	{
+		"pId": 4,
+		"name": "地形注记",
+		"id": 10012,
+		"type": "raster",
+		"layerid": "dixinglabel"
+	},
+	{
+		"pId": 1,
+		"name": "1:100万矢量数据",
+		"id": 5,
+		"nocheck": true
+	},
+	{
+		"pId": 5,
+		"name": "图集",
+		"id": 110013,
+		"type": "geowintms",
+		"layerid": "100wanvector,100wanlabel",
+		"bounds": ""
+	},
+	{
+		"pId": 5,
+		"name": "水系",
+		"id": 10013,
+		"type": "geowintms",
+		"layerid": "100shuxi.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 5,
+		"name": "交通",
+		"id": 10014,
+		"type": "geowintms",
+		"layerid": "100jiaotong.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 1,
+		"name": "全国1:25万矢量数据",
+		"id": 6,
+		"nocheck": true
+	},
+	{
+		"pId": 6,
+		"name": "行政区划",
+		"id": 10018
+	},
+	{
+		"pId": 6,
+		"name": "水系",
+		"id": 10019
+	},
+	{
+		"pId": 6,
+		"name": "交通",
+		"id": 10020
+	},
+	{
+		"pId": 6,
+		"name": "面状居民地",
+		"id": 10021
+	},
+	{
+		"pId": 6,
+		"name": "点状居民地",
+		"id": 10022
+	},
+	{
+		"pId": 6,
+		"name": "注记",
+		"id": 10023
+	},
+	{
+		"pId": 1,
+		"name": "影像",
+		"id": 9,
+		"nocheck": true
+	},
+	{
+		"pId": 9,
+		"name": "谷歌影像",
+		"id": 900,
+		"layerid": "sategoogle",
+		"type": "raster"
+	},
+	{
+		"pId": 9,
+		"name": "Mapbox全球影像",
+		"id": 901,
+		"layerid": "satemapbox",
+		"type": "raster"
+	},
+	{
+		"pId": 9,
+		"name": "微软全球影像",
+		"id": 902,
+		"layerid": "satemapbox",
+		"type": "raster"
+	},
+	{
+		"pId": 9,
+		"name": "全球历史影像",
+		"id": 903,
+		"layerid": "historysate",
+		"type": "raster",
+		"special": "times.sate"
+	},
+	{
+		"pId": 9,
+		"name": "全国影像",
+		"id": 904,
+		"layerid": "sate",
+		"type": "raster"
+	},
+	{
+		"pId": 9,
+		"name": "重点城市影像",
+		"id": 11,
+		"nocheck": true
+	},
+	{
+		"pId": 1,
+		"name": "地表覆盖",
+		"id": 9000,
+		"nocheck": true
+	},
+	{
+		"pId": 9000,
+		"name": "地表覆盖30米",
+		"id": 9001,
+		"type": "raster",
+		"layerid": "30landconver.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "房屋建筑区",
+		"id": 9002,
+		"type": "raster",
+		"layerid": "landconver_房屋建筑区.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "荒漠与裸露地",
+		"id": 9003,
+		"type": "raster",
+		"layerid": "landconver_荒漠与裸露地.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "林草覆盖",
+		"id": 9004,
+		"type": "raster",
+		"layerid": "landconver_林草覆盖.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "人工地表",
+		"id": 9005,
+		"type": "raster",
+		"layerid": "landconver_人工地表.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "水域",
+		"id": 9006,
+		"type": "raster",
+		"layerid": "landconver_水域.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "种植土地",
+		"id": 9007,
+		"type": "raster",
+		"layerid": "landconver_种植土地.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 9000,
+		"name": "土壤分类",
+		"id": 90071,
+		"type": "raster",
+		"layerid": "turangfenlei.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 1,
+		"name": "地形地貌",
+		"id": 900001,
+		"nocheck": true
+	},
+	{
+		"pId": 900001,
+		"name": "地貌",
+		"id": 100331,
+		"type": "raster",
+		"layerid": "quanguo_dimao.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 900001,
+		"name": "全球30米地形",
+		"id": 12,
+		"type": "dem",
+		"layerid": "terrain_rgb"
+	},
+	{
+		"pId": 900001,
+		"name": "全国10米地形",
+		"id": 13
+	},
+	{
+		"pId": 1,
+		"name": "行政境界",
+		"id": 14,
+		"nocheck": true
+	},
+	{
+		"pId": 14,
+		"name": "国界",
+		"id": 10032
+	},
+	{
+		"pId": 14,
+		"name": "省界",
+		"id": 10033,
+		"type": "raster",
+		"layerid": "zhegnqu_sheng.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 14,
+		"name": "市界",
+		"id": 10034,
+		"type": "geowintms",
+		"layerid": "zhegnqu_shi.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 14,
+		"name": "县界",
+		"id": 10035,
+		"type": "raster",
+		"layerid": "zhegnqu_xian.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 14,
+		"name": "注记",
+		"id": 100351,
+		"type": "raster",
+		"layerid": "zhegnqu_biaozhu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 1,
+		"name": "深色地图",
+		"id": 1003512,
+		"type": "geowintms",
+		"layerid": "darkmap",
+		"bounds": ""
+	},
+	{
+		"pId": 1,
+		"name": "地理实体",
+		"id": 15,
+		"nocheck": true
+	},
+	{
+		"pId": 15,
+		"name": "河流",
+		"id": 10036
+	},
+	{
+		"pId": 15,
+		"name": "湖泊",
+		"id": 10037
+	},
+	{
+		"pId": 15,
+		"name": "高铁线路",
+		"id": 10038
+	},
+	{
+		"pId": 15,
+		"name": "高速公路",
+		"id": 10039
+	},
+	{
+		"pId": 15,
+		"name": "冰川湿地",
+		"id": 10040
+	},
+	{
+		"pId": 15,
+		"name": "国家森林公园",
+		"id": 10041
+	},
+	{
+		"pId": 15,
+		"name": "主体功能区",
+		"id": 100411,
+		"type": "raster",
+		"layerid": "zhutigongnengqu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 15,
+		"name": "生态功能保护区",
+		"id": 100412,
+		"type": "raster",
+		"layerid": "shengtaigongnengbaohuqu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 15,
+		"name": "自然保护区",
+		"id": 17,
+		"nocheck": true
+	},
+	{
+		"pId": 17,
+		"name": "国家级自然保护区",
+		"id": 10042
+	},
+	{
+		"pId": 17,
+		"name": "地方级自然保护区",
+		"id": 10043
+	},
+	{
+		"pId": 1,
+		"name": "重点区域",
+		"id": 150001,
+		"nocheck": true
+	},
+	{
+		"pId": 150001,
+		"name": "汾渭平原",
+		"id": 150002,
+		"type": "raster",
+		"layerid": "fenweipingyuan.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "黄河大保护",
+		"id": 150003,
+		"type": "raster",
+		"layerid": "huanghebaohu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "京津冀",
+		"id": 150003,
+		"type": "raster",
+		"layerid": "jingjinji.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "十大流域",
+		"id": 150004,
+		"type": "raster",
+		"layerid": "shidaliuyu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "苏鲁豫皖",
+		"id": 150005,
+		"type": "geowintms",
+		"layerid": "shuluyuwan.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "长江大保护区",
+		"id": 150006,
+		"type": "raster",
+		"layerid": "changjiangbaohu.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 150001,
+		"name": "长三角",
+		"id": 150007,
+		"type": "raster",
+		"layerid": "chuangsanjiao.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 0,
+		"name": "政务专题数据",
+		"id": 2,
+		"nocheck": true
+	},
+	{
+		"pId": 2,
+		"name": "宏观经济数据库",
+		"id": 19,
+		"nocheck": true
+	},
+	{
+		"pId": 19,
+		"name": "GDP2003",
+		"id": 10049,
+		"type": "raster",
+		"layerid": "gdp_2003.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 19,
+		"name": "GDP2015",
+		"id": 100501,
+		"type": "raster",
+		"layerid": "gdp_2015.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 19,
+		"name": "GDP2017",
+		"id": 10050,
+		"type": "raster",
+		"layerid": "gdp_2017.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 2,
+		"name": "法人单位数据库",
+		"id": 20,
+		"layerid": "20",
+		"subtree": "fr.json",
+		"typeext": "faren",
+		"tableinfo": {
+			"pm": "faren",
+			"table": "GS2020",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "ENTNAME",
+			"morecon": "",
+			"cache": true
+		},
+		"type": "raster"
+	},
+	{
+		"pId": 2,
+		"name": "人口统计数据库",
+		"id": 21,
+		"    ": true
+	},
+	{
+		"pId": 21,
+		"name": "五普",
+		"id": 10052,
+		"type": "raster",
+		"layerid": "renkou_2003.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 21,
+		"name": "六普",
+		"id": 10053,
+		"type": "raster",
+		"layerid": "renkou_2017.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 2,
+		"name": "气象信息",
+		"id": 22,
+		"nocheck": true
+	},
+	{
+		"pId": 22,
+		"name": "降雨量",
+		"id": 10055
+	},
+	{
+		"pId": 22,
+		"name": "降雨预报",
+		"id": 10056
+	},
+	{
+		"pId": 22,
+		"name": "云图",
+		"id": 10057
+	},
+	{
+		"pId": 22,
+		"name": "台风",
+		"id": 10058
+	},
+	{
+		"pId": 2,
+		"name": "水库",
+		"id": 23,
+		"nocheck": true
+	},
+	{
+		"pId": 23,
+		"name": "大中型水库分布",
+		"id": 10059,
+		"type": "geowintms",
+		"layerid": "水库.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 23,
+		"name": "水库工情",
+		"id": 10060
+	},
+	{
+		"pId": 23,
+		"name": "水库汛情",
+		"id": 10061
+	},
+	{
+		"pId": 2,
+		"name": "水文站",
+		"id": 24,
+		"nocheck": true
+	},
+	{
+		"pId": 24,
+		"name": "水文站分布",
+		"id": 10062,
+		"type": "raster",
+		"layerid": "水文站.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 24,
+		"name": "水文信息",
+		"id": 10063
+	},
+	{
+		"pId": 24,
+		"name": "河流讯情",
+		"id": 10064
+	},
+	{
+		"pId": 2,
+		"name": "地质灾害",
+		"id": 25,
+		"nocheck": true
+	},
+	{
+		"pId": 25,
+		"name": "滑坡",
+		"id": 10065
+	},
+	{
+		"pId": 25,
+		"name": "泥石流",
+		"id": 10066
+	},
+	{
+		"pId": 25,
+		"name": "崩塌",
+		"id": 10067
+	},
+	{
+		"pId": 2,
+		"name": "地震",
+		"id": 2599,
+		"nocheck": true
+	},
+	{
+		"pId": 2599,
+		"name": "地震点分布",
+		"id": 11066,
+		"type": "raster",
+		"layerid": "地震点分布.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 2599,
+		"name": "地震断裂带",
+		"id": 11067,
+		"type": "raster",
+		"layerid": "地震断裂带.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 2,
+		"name": "学校",
+		"id": 26,
+		"type": "raster",
+		"layerid": "26",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "diamond",
+			"namefd": "name",
+			"morecon": "",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "幼儿园",
+		"id": 10068,
+		"type": "raster",
+		"layerid": "10068",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=1",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "小学",
+		"id": 10069,
+		"type": "raster",
+		"layerid": "10069",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=2",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "中学",
+		"id": 10070,
+		"type": "raster",
+		"layerid": "10070",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=3",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "职业学校",
+		"id": 10071,
+		"type": "raster",
+		"layerid": "10071",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=4",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "特殊学校",
+		"id": 110071,
+		"type": "raster",
+		"layerid": "110071",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "diamond",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=7",
+			"cache": true
+		}
+	},
+	{
+		"pId": 26,
+		"name": "中专",
+		"id": 110072,
+		"type": "raster",
+		"layerid": "110072",
+		"bounds": "",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "MOE_EMIS_SCH_INFO_ALL",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "diamond",
+			"namefd": "name",
+			"morecon": "SCH_TYPE=9",
+			"cache": true
+		}
+	},
+	{
+		"pId": 2,
+		"name": "医院",
+		"id": 27,
+		"type": "raster",
+		"layerid": "医院.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 27,
+		"name": "省情",
+		"id": 10072
+	},
+	{
+		"pId": 2,
+		"name": "交通",
+		"id": 28,
+		"type": "raster",
+		"layerid": "火车站.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 28,
+		"name": "火车站",
+		"id": 10073,
+		"type": "raster",
+		"layerid": "火车站.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 28,
+		"name": "飞机场",
+		"id": 100731,
+		"type": "raster",
+		"layerid": "飞机场.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 28,
+		"name": "汽车站",
+		"id": 100732,
+		"type": "raster",
+		"layerid": "汽车站.arcmxd",
+		"bounds": ""
+	},
+	{
+		"pId": 2,
+		"name": "基本农情数据",
+		"id": 29,
+		"nocheck": true
+	},
+	{
+		"pId": 29,
+		"name": "县情",
+		"id": 10074
+	},
+	{
+		"pId": 2,
+		"name": "民政数据",
+		"id": 30,
+		"nocheck": true
+	},
+	{
+		"pId": 2,
+		"name": "央企运行数据",
+		"id": 31,
+		"nocheck": true
+	},
+	{
+		"pId": 2,
+		"name": "残疾人状况",
+		"id": 32,
+		"nocheck": true
+	},
+	{
+		"pId": 2,
+		"name": "综合国情信息",
+		"id": 33,
+		"nocheck": true
+	},
+	{
+		"pId": 0,
+		"name": "互联网空间数据",
+		"id": 340000,
+		"nocheck": true
+	},
+	{
+		"pId": 340000,
+		"name": "兴趣点",
+		"id": 340009,
+		"layerid": "340009",
+		"subtree": "poi.json",
+		"typeext": "poi",
+		"tableinfo": {
+			"pm": "poi",
+			"table": "poi",
+			"latfd": "lat",
+			"lngfd": "lng",
+			"style": "circle",
+			"namefd": "name",
+			"morecon": "",
+			"cache": true
+		},
+		"type": "raster"
+	},
+	{
+		"pId": 340000,
+		"name": "百度地图",
+		"id": 340001,
+		"nocheck": true
+	},
+	{
+		"pId": 340000,
+		"name": "高德地图",
+		"id": 340002,
+		"nocheck": true
+	},
+	{
+		"pId": 340000,
+		"name": "腾讯地图",
+		"id": 340003,
+		"nocheck": true
+	},
+	{
+		"pId": 340000,
+		"name": "OpenStreetMap",
+		"id": 340004,
+		"nocheck": true
+	},
+	{
+		"pId": 1,
+		"name": "AOI数据",
+		"id": 10,
+		"nocheck": true
+	},
+	{
+		"pId": 1,
+		"name": "城市边界",
+		"id": 11,
+		"nocheck": true
+	},
+	{
+		"pId": 10,
+		"name": "北京AOI",
+		"id": 1001,
+		"type": "geowintms",
+		"layerid": "北京AOI.arcmxd",
+		"bounds": [
+			115.928,
+			39.431,
+			116.976,
+			40.251
+		]
+	},
+	{
+		"pId": 11,
+		"name": "北京边界",
+		"id": 1101,
+		"nocheck": true
+	},
+	{
+		"pId": 11,
+		"name": "全国城市边界",
+		"id": 1102,
+		"nocheck": true
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2000",
+		"id": 110101,
+		"type": "raster",
+		"layerid": "北京边界2000.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2005",
+		"id": 110102,
+		"type": "raster",
+		"layerid": "北京边界2005.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2010",
+		"id": 110103,
+		"type": "raster",
+		"layerid": "北京边界2010.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2015",
+		"id": 110104,
+		"type": "raster",
+		"layerid": "北京边界2015.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2016",
+		"id": 110105,
+		"type": "raster",
+		"layerid": "北京边界2016.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2017",
+		"id": 110106,
+		"type": "raster",
+		"layerid": "北京边界2017.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1101,
+		"name": "北京边界2018",
+		"id": 110107,
+		"type": "raster",
+		"layerid": "北京边界2018.arcmxd",
+		"bounds": [
+			115.888,
+			39.679,
+			117.162,
+			40.517
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1992",
+		"id": 110201,
+		"type": "geowintms",
+		"layerid": "全国城市边界1992.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1993",
+		"id": 110202,
+		"type": "raster",
+		"layerid": "全国城市边界1993.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1995",
+		"id": 110203,
+		"type": "raster",
+		"layerid": "全国城市边界1995.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1996",
+		"id": 110204,
+		"type": "raster",
+		"layerid": "全国城市边界1996.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1998",
+		"id": 110205,
+		"type": "raster",
+		"layerid": "全国城市边界1998.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界1999",
+		"id": 110206,
+		"type": "raster",
+		"layerid": "全国城市边界1999.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2000",
+		"id": 110207,
+		"type": "raster",
+		"layerid": "全国城市边界2000.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2001",
+		"id": 110208,
+		"type": "raster",
+		"layerid": "全国城市边界2001.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2002",
+		"id": 110209,
+		"type": "raster",
+		"layerid": "全国城市边界2002.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2003",
+		"id": 110210,
+		"type": "raster",
+		"layerid": "全国城市边界2003.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2004",
+		"id": 110211,
+		"type": "raster",
+		"layerid": "全国城市边界2004.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2005",
+		"id": 110212,
+		"type": "raster",
+		"layerid": "全国城市边界2005.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2006",
+		"id": 110213,
+		"type": "raster",
+		"layerid": "全国城市边界2006.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2007",
+		"id": 110214,
+		"type": "raster",
+		"layerid": "全国城市边界2007.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2008",
+		"id": 110215,
+		"type": "raster",
+		"layerid": "全国城市边界2008.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2009",
+		"id": 110216,
+		"type": "raster",
+		"layerid": "全国城市边界2009.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2010",
+		"id": 110217,
+		"type": "raster",
+		"layerid": "全国城市边界2010.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2012",
+		"id": 110218,
+		"type": "raster",
+		"layerid": "全国城市边界2012.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 1102,
+		"name": "全国城市边界2015",
+		"id": 110219,
+		"type": "raster",
+		"layerid": "全国城市边界2015.arcmxd",
+		"bounds": [
+			67.830,
+			15.233,
+			136.573,
+			54.684
+		]
+	},
+	{
+		"pId": 150001,
+		"name": "云南国际通道",
+		"id": 150008,
+		"nocheck": true
+	},
+	{
+		"pId": 150008,
+		"name": "八入滇铁路",
+		"id": 15000801,
+		"type": "raster",
+		"layerid": "八入滇铁路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "出境水运通道",
+		"id": 15000802,
+		"type": "raster",
+		"layerid": "出境水运通道.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "出境铁路通道",
+		"id": 15000803,
+		"type": "raster",
+		"layerid": "出境铁路通道.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "出省水运通道",
+		"id": 15000804,
+		"type": "raster",
+		"layerid": "出省水运通道.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "公路通道",
+		"id": 15000805,
+		"type": "raster",
+		"layerid": "公路通道.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "四出境公路",
+		"id": 15000806,
+		"type": "raster",
+		"layerid": "四出境公路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "四出境经缅甸至南亚公路",
+		"id": 15000807,
+		"type": "raster",
+		"layerid": "四出境经缅甸至南亚公路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "四出境中老泰公路",
+		"id": 15000808,
+		"type": "raster",
+		"layerid": "四出境中老泰公路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "四出境中缅公路",
+		"id": 15000809,
+		"type": "raster",
+		"layerid": "四出境中缅公路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "四出境中越公路",
+		"id": 15000810,
+		"type": "raster",
+		"layerid": "四出境中越公路.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 150008,
+		"name": "云南省对外口岸",
+		"id": 15000811,
+		"type": "raster",
+		"layerid": "云南省对外口岸.arcmxd",
+		"bounds": [
+			84.975,
+			0.173,
+			128.235,
+			34.866
+		]
+	},
+	{
+		"pId": 15,
+		"name": "云南生物多样性",
+		"id": 1501,
+		"nocheck": true
+	},
+	{
+		"pId": 1501,
+		"name": "云南生物多样性",
+		"id": 150101,
+		"type": "raster",
+		"layerid": "云南生物多样性.arcmxd",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 9,
+		"name": "云南生态环境专题地图",
+		"id": 908,
+		"nocheck": true
+	},
+	{
+		"pId": 908,
+		"name": "云南生态环境专题地图30m",
+		"id": 90301,
+		"type": "raster",
+		"layerid": "云南生态环境专题地图30m.arcmxd",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 908,
+		"name": "云南生态环境专题地图300m",
+		"id": 90302,
+		"type": "raster",
+		"layerid": "云南生态环境专题地图300m.arcmxd",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 908,
+		"name": "地质图",
+		"id": 90303,
+		"type": "raster",
+		"layerid": "地质图",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 908,
+		"name": "森林标注地图",
+		"id": 90304,
+		"type": "raster",
+		"layerid": "森林标注地图",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 908,
+		"name": "森林地图",
+		"id": 90305,
+		"type": "raster",
+		"layerid": "森林地图",
+		"bounds": [
+			97.820,
+			21.480,
+			105.629,
+			28.503
+		]
+	},
+	{
+		"pId": 9,
+		"name": "北京历史影像",
+		"id": 904,
+		"nocheck": true
+	},
+	{
+		"pId": 904,
+		"name": "1985",
+		"id": 9020,
+		"layerid": "sate_beijing_1985",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2001",
+		"id": 9021,
+		"layerid": "sate_beijing_2001",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2002",
+		"id": 9022,
+		"layerid": "sate_beijing_2002",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2003",
+		"id": 9023,
+		"layerid": "sate_beijing_2003",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2004",
+		"id": 9024,
+		"layerid": "sate_beijing_2004",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2005",
+		"id": 9025,
+		"layerid": "sate_beijing_2005",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2006",
+		"id": 9026,
+		"layerid": "sate_beijing_2006",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2007",
+		"id": 9027,
+		"layerid": "sate_beijing_2007",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2008",
+		"id": 9028,
+		"layerid": "sate_beijing_2008",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2009",
+		"id": 9029,
+		"layerid": "sate_beijing_2009",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2010",
+		"id": 9030,
+		"layerid": "sate_beijing_2010",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2011",
+		"id": 9031,
+		"layerid": "sate_beijing_2011",
+		"type": "geowintms",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2012",
+		"id": 9032,
+		"layerid": "sate_beijing_2012",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2013",
+		"id": 9033,
+		"layerid": "sate_beijing_2011",
+		"type": "geowintms",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2014",
+		"id": 9034,
+		"layerid": "sate_beijing_2014",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2015",
+		"id": 9035,
+		"layerid": "sate_beijing_2015",
+		"type": "geowintms",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2016",
+		"id": 9036,
+		"layerid": "sate_beijing_2016",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2017",
+		"id": 9037,
+		"layerid": "sate_beijing_2017",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2018",
+		"id": 9038,
+		"layerid": "sate_beijing_2018",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2019",
+		"id": 9039,
+		"layerid": "sate_beijing_2019",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	},
+	{
+		"pId": 904,
+		"name": "2020",
+		"id": 9040,
+		"layerid": "sate_beijing_2020",
+		"type": "raster",
+		"bounds": [
+			115.4167,
+			39.4414,
+			117.5081,
+			41.0592
+		]
+	}
+]
