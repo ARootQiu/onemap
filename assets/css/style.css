@@ -234,14 +234,15 @@ a:hover {
 
 .tool-panel {
 	position: absolute;
-	right: 10px;
-	bottom: 10px;
+	left: 50%;
+	top: 5px;
 	display: flex;
 	align-items: center;
 	transition: all 0.3s linear;
 	background-color: rgba(0, 39, 87, 0.8);
 	box-shadow: 0 0 3px 3px rgba(34, 82, 160, 0.8) inset;
 	border-radius: 5px;
+	transform: translate(-50%, 0);
 }
 
 .tool-panel>div {
@@ -282,7 +283,7 @@ a:hover {
 }
 
 .right-panel {
-	width: 15rem;
+	width: 13rem;
 	position: absolute;
 	right: 3rem;
 	top: 20px;
@@ -346,10 +347,6 @@ a:hover {
 	content: '影像列表';
 }
 
-.panel-content .sec-list:nth-child(2) .subtitle::after {
-	content: '参数设置';
-}
-
 .sec-list .list-idx {
 	margin-right: 8px;
 	font-size: 14px;
@@ -380,8 +377,12 @@ a:hover {
 	cursor: not-allowed;
 }
 
-.setting {
-	margin-top: 15px
+.setting  {
+	margin-bottom: 10px !important;
+}
+
+.setting .subtitle{
+	height: 10px;
 }
 
 .setting .items {
@@ -855,7 +856,7 @@ a:hover {
 }
 
 .list-checked .list-text {
-	width: 12rem;
+	width: 10rem;
 }
 
 .text-ellipsis {

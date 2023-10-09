@@ -43,6 +43,9 @@ function loadmap() {
     drawTool = new GeowinDraw({ displayControlsDefault: false });
     map.addControl(drawTool);
 
+    this.vue.expandedKeys = [3]
+	this.vue.$refs.layerTree.setCheckedKeys([3]);
+
 }
 function test() {
     for (i = 0; i < map.getStyle().layers.length; i++) {

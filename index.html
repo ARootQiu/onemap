@@ -15,8 +15,8 @@
 	<script src="vendor/ui-bootstrap-tpls.js"></script>
 	<script src="vendor/rzslider.js"></script>
 	<link rel="stylesheet" href="map.css" rel="stylesheet">
-	<script type="text/javascript" src="/geowinmap/api/v12/core-gl-dev.js"></script>
-	<script type="text/javascript" src="/geowinmap/static/v12/mapext.js"></script>
+	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/api/v12/core-gl-dev.js"></script> -->
+	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/mapext.js"></script> -->
 	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/ext/mapcase.js"></script> -->
 	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/ext/draw.js"></script> -->
 	<!-- script type="text/javascript" src="http://192.168.10.46/geowinmap/api?version=gapi&utils=mapcase,draw&res=styles/streets.json"></script-->
@@ -25,15 +25,12 @@
 </head>
 
 <body onload="loadmap()">
-
-	<body>
 		<div id="app" class="wrap-container wh-100">
 			<header>
 				<div class="titles">
 					<div class="title">Geowindows 时空大数据一张图<button type="button" onclick="test()">测试</button></div>
 					<div class="sub-title">Geowindows BIG DATA PLATFORM</div>
 				</div>
-				<div class="icon-profile d-center"><i class="el-icon-user-solid"></i></div>
 			</header>
 			<nav class="navbar">
 				<input type="checkbox" checked @change="toggleNav" />
@@ -185,7 +182,7 @@
 
 				<div class="right-panel panels">
 					<div class="d-between">
-						<div class="panel-content">
+						<div class="panel-content" style="padding-bottom: 0;">
 							<div class="sec-list" v-if="screenageList.length > 0">
 								<div class="subtitle"></div>
 								<ul class="list-checked">
@@ -194,18 +191,18 @@
 										@click="moveLayer(index, $event)">
 										<div class="d-flex align-center list-text">
 											<div class="list-idx">{{index + 1}}.</div>
-											<div class="text-ellipsis">{{item.name}}</div>
+											<div class="text-ellipsis" :title="item.name">{{item.name}}</div>
 										</div>
 										<i class="el-icon-delete"
 											style="color: #FFFFFF; font-size: 1rem; cursor: pointer;"
-											@click="removeLayer(item)"></i>
+											@click.stop="removeLayers(item)"></i>
 									</li>
 								</ul>
 							</div>
 							<div class="move-list" v-if="screenageList.length > 1">
 								<i class="el-icon-bottom" @click="moveDown"
-									:disabled="currentLayerIndex == screenageList.length - 1"></i>
-								<i class="el-icon-top" @click="moveUp" :disabled="currentLayerIndex == 0"></i>
+									:disabled="currentLayerIndex == screenageList.length - 1 || currentLayerIndex < 0"></i>
+								<i class="el-icon-top" @click="moveUp" :disabled="currentLayerIndex < 1"></i>
 								<i class="el-icon-download"></i>
 								<i class="el-icon-upload2"></i>
 							</div>
@@ -214,19 +211,19 @@
 								<ul>
 									<li class="items d-between align-center">
 										<span class="demonstration">背景亮度</span>
-										<el-slider v-model="paramSetting.bgValue"></el-slider>
+										<el-slider v-model="paramSetting.bgValue" :disabled="currentLayerIndex < 0"></el-slider>
 									</li>
 									<li class="items d-between align-center">
 										<span class="demonstration">透明度</span>
-										<el-slider v-model="paramSetting.alphaValue"></el-slider>
+										<el-slider v-model="paramSetting.alphaValue" :disabled="currentLayerIndex < 0"></el-slider>
 									</li>
 									<li class="items d-between align-center">
 										<span class="demonstration">对比度</span>
-										<el-slider v-model="paramSetting.contrastValue"></el-slider>
+										<el-slider v-model="paramSetting.contrastValue" :disabled="currentLayerIndex < 0"></el-slider>
 									</li>
 									<li class="items d-between align-center">
 										<span class="demonstration">饱和度</span>
-										<el-slider v-model="paramSetting.saturationValue"></el-slider>
+										<el-slider v-model="paramSetting.saturationValue" :disabled="currentLayerIndex < 0"></el-slider>
 									</li>
 								</ul>
 							</div>
@@ -386,8 +383,6 @@
 						if (key == 'showLayers') {
 							this.$nextTick(() => {
 								this.drag()
-								this.expandedKeys = [3]
-								this.$refs.layerTree.setCheckedKeys([3]);
 							})
 						}
 					},
@@ -395,7 +390,6 @@
 					handleCheck(data, checked) {
 						let checkStatus = checked.checkedKeys.includes(data.id)
 						checkLayerTreeNode(data, checkStatus);
-
 					},
 
 					/** 获取省市 */
@@ -529,11 +523,12 @@
 					},
 
 					/** 移除图层 */
-					removeLayer(item) {
+					removeLayers(item) {
 						// 取消选中
 						this.$refs.layerTree.setChecked(item, false);
 						// 删除列表
 						this.screenageList = this.screenageList.filter(obj => obj.id != item.id)
+						this.currentLayerIndex = -1;
 					},
 
 					/** 调整图层顺序 */
