@@ -432,19 +432,7 @@
 
 					/** Slider初始化 */
 					initSlider() {
-						let arr = [];
-						for (var i = 0; i < 80; i++) {
-							let jn = {},
-								num = null;
-							if (i % 20 == 0) num = i
-							jn = {
-								value: i,
-								legend: num
-							}
-							arr.push(jn)
-						}
 						var app = angular.module('rzSliderDemo', ['rzSlider', 'ui.bootstrap']);
-
 						app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $modal) {
 							$scope.slider_dates = {
 								value: '2022-12',
@@ -593,9 +581,18 @@
 
 		.rzslider .rz-ticks-values-under .rz-tick-value {
 			bottom: -20px;
-			color: #767676
+			color: #767676;
 		}
 
+		.rzslider .rz-tick-value {
+			display: none;
+		}
+
+		.rzslider .rz-tick-legend {
+			top: 15px;
+			max-width: unset;
+			white-space: nowrap;
+		}
 
 		.el-checkbox.is-disabled {
 			display: none;

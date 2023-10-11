@@ -344,7 +344,7 @@ a:hover {
 }
 
 .panel-content .sec-list:nth-child(1) .subtitle::after {
-	content: '影像列表';
+	content: '图层列表';
 }
 
 .sec-list .list-idx {

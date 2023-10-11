@@ -209,13 +209,25 @@ function setDefaultStyle() {
 
 var selectDate = null;
 function getHistoryRasterDates() {
-
+    
     var url = CGeowin.AbrPath + "/gee/getcentertiledates.it?l=" + Math.round(map.getZoom()) + "&center=" + map.getCenter().lng.toFixed(5) + "," + map.getCenter().lat.toFixed(5);
     CGetData(url, function (data) {
         data = CParseObj(data);
-        var dates = [], legend = '';
+        let [dates, formmatDate, len] = [[], '', Math.floor(data.length / 10)]
         for (var i = 1; i < data.length; i++) {
             dates.push(new Date(Date.parse(data[i])))
+        }
+        // 整理时间轴label
+        for (var i = 0; i < data.length; i++) {
+            if (data[i] != null) ;
+                formmatDate = data[i].getFullYear() + "-" + add2Length(data[i].getMonth() + 1)  // 根据返回数据格式化时间（yyyy-MM格式）
+            if (i == data.length - 1 || (i % 10 == 0 && len != i / 10 ))    // 判断添加slider ticks
+                dates.push({
+                    value: formmatDate,
+                    legend: formmatDate
+                })
+            else 
+                dates.push({value: formmatDate})
         }
         var appE = document.querySelector('[ng-controller=MainCtrl]');
         var $scope = angular.element(appE).scope();
@@ -227,7 +239,7 @@ function getHistoryRasterDates() {
             options: {
                 stepsArray: dates,
                 showTicks: true,
-                showTicksValues: dates.length > 50 ? 8 : 5,
+                showTicksValues: true,
                 ticksValuesTooltip: function (v) {
 
                 },
@@ -235,13 +247,13 @@ function getHistoryRasterDates() {
                     selectDate = newValue;
                     addHistoryRaster(newValue);
                 },
-                translate: function (date) {
-                    return getYearMonth(date);
-                },
+                // 时间已在上面格式化完成，无需再次转换
+                // translate: function (date) {
+                //     return getYearMonth(date);
+                // },
             }
         };
         $scope.$apply();
-
     })
 }
 
