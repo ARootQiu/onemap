@@ -15,11 +15,11 @@
 	<script src="vendor/ui-bootstrap-tpls.js"></script>
 	<script src="vendor/rzslider.js"></script>
 	<link rel="stylesheet" href="map.css" rel="stylesheet">
-	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/api/v12/core-gl-dev.js"></script> -->
-	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/mapext.js"></script> -->
-	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/ext/mapcase.js"></script> -->
-	<!-- <script type="text/javascript" src="http://192.168.10.46/geowinmap/static/v12/ext/draw.js"></script> -->
-	<!-- script type="text/javascript" src="http://192.168.10.46/geowinmap/api?version=gapi&utils=mapcase,draw&res=styles/streets.json"></script-->
+	<!-- <script type="text/javascript" src="/geowinmap/api/v12/core-gl-dev.js"></script> -->
+	<!-- <script type="text/javascript" src="/geowinmap/static/v12/mapext.js"></script> -->
+	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/mapcase.js"></script> -->
+	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/draw.js"></script> -->
+	<!-- script type="text/javascript" src="/geowinmap/api?version=gapi&utils=mapcase,draw&res=styles/streets.json"></script-->
 
 	<script src="js/map.js"></script>
 </head>
@@ -27,20 +27,15 @@
 <body onload="loadmap()">
 		<div id="app" class="wrap-container wh-100">
 			<header>
-				<div class="titles">
-					<div class="title">Geowindows 时空大数据一张图<button type="button" onclick="test()">测试</button></div>
-					<div class="sub-title">Geowindows BIG DATA PLATFORM</div>
-				</div>
+				<div class="title">Geowindows 时空大数据一张图<button type="button" onclick="test()">测试</button></div>
+				<div class="sub-title">Geowindows BIG DATA PLATFORM</div>
 			</header>
-			<nav class="navbar">
-				<input type="checkbox" checked @change="toggleNav" />
-				<span></span>
-				<span></span>
-				<ul>
+			<nav>
+				<ul class="navbar">
 					<li>
 						<div @click="menuClick('showCitySel')">
 							<i class="iconfont icon-hangzhengquhua"></i>
-							<div>政区<br>导航</div>
+							<div>政区导航</div>
 						</div>
 						<transition name="el-zoom-in-top">
 							<div id="citys" class="city-select panel-popup" v-show="menuStatus['showCitySel']">
@@ -74,7 +69,7 @@
 					<li>
 						<div @click="menuClick('showLayers')">
 							<i class="iconfont icon-layers"></i>
-							<div>图层<br>目录</div>
+							<div>图层目录</div>
 						</div>
 						<transition name="el-zoom-in-top">
 							<div id="layers" class="overhide" v-show="menuStatus['showLayers']">
@@ -103,7 +98,7 @@
 					<li>
 						<div @click="menuClick('showSPA')">
 							<i class="iconfont icon-sousuoleimufill"></i>
-							<div>空间<br>分析</div>
+							<div>空间分析</div>
 						</div>
 						<transition name="el-zoom-in-top">
 							<div id="SPA" class="panel-popup" v-if="menuStatus['showSPA']">
@@ -174,10 +169,24 @@
 					<div>
 						<div class="curr-city__text">中国</div>
 					</div>
-					<div><img src="assets/img/icon_fullscreen.png" alt="全屏"></div>
-					<div><img src="assets/img/icon_del.png" alt="删除"></div>
-					<div><img src="assets/img/icon_anchors.png" alt="面"></div>
-					<div><img src="assets/img/icon_range.png" alt="多边形"></div>
+					<div><i class="iconfont icon-icon_tianjia"></i></div>
+					<div><i class="iconfont icon-jianshao"></i></div>
+					<div><i class="iconfont icon-quanping"></i></div>
+					<div><i class="iconfont icon-shanchu"></i></div>
+					<div><i class="iconfont icon-pin"></i></div>
+					<div><i class="iconfont icon-mian"></i></div>
+					<div><i class="iconfont icon-huaduobianxing"></i></div>
+					<div><i class="iconfont icon-Chat-"></i></div>
+				</div>
+
+				<div class="setting-panel panels">
+					<div><i class="iconfont icon-diqiu"></i></div>
+					<div><i class="iconfont icon-icon-"></i></div>
+					<div><i class="iconfont icon-layers"></i></div>
+					<div><i class="iconfont icon-weizhi"></i></div>
+					<div><i class="iconfont icon-tubiao"></i></div>
+					<div><i class="iconfont icon-zengjia"></i></div>
+					<div><i class="iconfont icon-jian_sekuai"></i></div>
 				</div>
 
 				<div class="right-panel panels">
@@ -242,6 +251,13 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- layer -->
+				<div class="layer-panel">
+					<div class="layer-sl active"><span>矢量</span></div>
+					<div class="layer-yx"><span>影像</span></div>
+					<div class="layer-ls"><span>历史</span></div>
+				</div>
 			</main>
 		</div>
 		<script type="module">
@@ -250,11 +266,6 @@
 				el: '#app',
 				data() {
 					return {
-						asideList: [
-							{ name: 'sidebar4', icon: 'assets/img/icon_sidebar4.png' },
-							{ name: 'sidebar2', icon: 'assets/img/icon_search.png' },
-							{ name: 'sidebar3', icon: 'assets/img/icon_split-screen.png' }
-						],
 						// 图层数据
 						layerData: [],
 						defaultProps: {
@@ -323,8 +334,8 @@
 				mounted() {
 					this.initSlider()
 					this.getCity()
-					$('.tool-panel .tool-box img').on('click', function (e) {
-						$(e.currentTarget).parent().addClass('active').siblings().removeClass('active')
+					$('.tool-panel > div, .layer-panel > div, .setting-panel > div').on('click', function (e) {
+						$(e.currentTarget).addClass('active').siblings().removeClass('active')
 					})
 					let _this = this
 					$.getJSON({
@@ -356,10 +367,8 @@
 								} else if (left > window.innerWidth - drag.offsetWidth) {
 									left = window.innerWidth - drag.offsetWidth;
 								}
-								if (top < -(window.innerHeight * 0.25 - 70)) {
-									top = -(window.innerHeight * 0.25 - 70);
-								} else if (top > window.innerHeight - drag.offsetHeight - window.innerHeight * 0.25) {
-									top = window.innerHeight - drag.offsetHeight - window.innerHeight * 0.25
+								if (top < 0) {
+									top = 0;
 								}
 
 								drag.style.left = left + 'px';

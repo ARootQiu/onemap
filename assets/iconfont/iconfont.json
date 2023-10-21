@@ -6,6 +6,125 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "679796",
+      "name": "增加",
+      "font_class": "zengjia",
+      "unicode": "e6ea",
+      "unicode_decimal": 59114
+    },
+    {
+      "icon_id": "982596",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "1614445",
+      "name": "减少",
+      "font_class": "jianshao",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "3217832",
+      "name": "亮度调节",
+      "font_class": "icon-",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "3538379",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "3634527",
+      "name": "地球 ",
+      "font_class": "diqiu",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "4347520",
+      "name": "icon_添加",
+      "font_class": "icon_tianjia",
+      "unicode": "eb89",
+      "unicode_decimal": 60297
+    },
+    {
+      "icon_id": "4933870",
+      "name": "面",
+      "font_class": "mian",
+      "unicode": "ec1e",
+      "unicode_decimal": 60446
+    },
+    {
+      "icon_id": "5831333",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "6807699",
+      "name": "Chat-2",
+      "font_class": "Chat-",
+      "unicode": "ecb1",
+      "unicode_decimal": 60593
+    },
+    {
+      "icon_id": "7956835",
+      "name": "减_色块",
+      "font_class": "jian_sekuai",
+      "unicode": "ed21",
+      "unicode_decimal": 60705
+    },
+    {
+      "icon_id": "9626897",
+      "name": "路线",
+      "font_class": "luxian",
+      "unicode": "e874",
+      "unicode_decimal": 59508
+    },
+    {
+      "icon_id": "9923738",
+      "name": "区域管理",
+      "font_class": "quyuguanli",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "20912236",
+      "name": "访问量",
+      "font_class": "fangwenliang",
+      "unicode": "e8b0",
+      "unicode_decimal": 59568
+    },
+    {
+      "icon_id": "21096767",
+      "name": "pin",
+      "font_class": "pin",
+      "unicode": "ecd2",
+      "unicode_decimal": 60626
+    },
+    {
+      "icon_id": "33191308",
+      "name": "街道核查",
+      "font_class": "icon_xinyong_xianxing_jijin-289",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "36571796",
+      "name": "画多边形",
+      "font_class": "huaduobianxing",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "7594875",
       "name": "24gf-folderOpen",
       "font_class": "gf-folderOpen",
