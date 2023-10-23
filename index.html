@@ -15,8 +15,8 @@
 	<script src="vendor/ui-bootstrap-tpls.js"></script>
 	<script src="vendor/rzslider.js"></script>
 	<link rel="stylesheet" href="map.css" rel="stylesheet">
-	<script type="text/javascript" src="/geowinmap/api/v12/core-gl-dev.js"></script>
-	<script type="text/javascript" src="/geowinmap/static/v12/mapext.js"></script>
+	<script type="text/javascript" src="http://192.168.10.135/geowinmap/api/v12/core-gl-dev.js"></script>
+	<script type="text/javascript" src="http://192.168.10.135/geowinmap/static/v12/mapext.js"></script>
 	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/mapcase.js"></script> -->
 	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/draw.js"></script> -->
 	<!-- script type="text/javascript" src="/geowinmap/api?version=gapi&utils=mapcase,draw&res=styles/streets.json"></script-->
@@ -251,6 +251,7 @@
 				<div class="layer-sl active" @click="changeMapType('矢量')"><span>矢量</span></div>
 				<div class="layer-yx" @click="changeMapType('影像')"><span>影像</span></div>
 				<div class="layer-ls" @click="changeMapType('历史')"><span>历史</span></div>
+				<div class="layer-terrain" :class="{act: is3D}" @click="changeMapTerrain"><span>地形</span></div>
 			</div>
 		</main>
 	</div>
@@ -314,7 +315,8 @@
 					// 当前图层列表中选中图层
 					currentLayerIndex: -1,
 					// 默认展开节点
-					expandedKeys: []
+					expandedKeys: [],
+					is3D: false,	// 是否选择地形
 				}
 			},
 
@@ -328,7 +330,7 @@
 			mounted() {
 				this.initSlider()
 				this.getCity()
-				$('.tool-panel > div, .layer-panel > div, .setting-panel > div').on('click', function (e) {
+				$('.tool-panel > div, .layer-panel > div:not(.layer-terrain), .setting-panel > div').on('click', function (e) {
 					$(e.currentTarget).addClass('active').siblings().removeClass('active')
 				})
 				let _this = this

@@ -628,3 +628,7 @@ function setDefaultStyle() {
 
     map.setStyle(style);
 }
+
+function changeMapTerrain() {
+    this.vue.is3D = !this.vue.is3D;
+}
