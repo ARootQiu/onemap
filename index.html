@@ -15,8 +15,8 @@
 	<script src="vendor/ui-bootstrap-tpls.js"></script>
 	<script src="vendor/rzslider.js"></script>
 	<link rel="stylesheet" href="map.css" rel="stylesheet">
-	<!-- <script type="text/javascript" src="/geowinmap/api/v12/core-gl-dev.js"></script> -->
-	<!-- <script type="text/javascript" src="/geowinmap/static/v12/mapext.js"></script> -->
+	<script type="text/javascript" src="/geowinmap/api/v12/core-gl-dev.js"></script>
+	<script type="text/javascript" src="/geowinmap/static/v12/mapext.js"></script>
 	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/mapcase.js"></script> -->
 	<!-- <script type="text/javascript" src="/geowinmap/static/v12/ext/draw.js"></script> -->
 	<!-- script type="text/javascript" src="/geowinmap/api?version=gapi&utils=mapcase,draw&res=styles/streets.json"></script-->
@@ -25,587 +25,585 @@
 </head>
 
 <body onload="loadmap()">
-		<div id="app" class="wrap-container wh-100">
-			<header>
-				<div class="title">Geowindows 时空大数据一张图<button type="button" onclick="test()">测试</button></div>
-				<div class="sub-title">Geowindows BIG DATA PLATFORM</div>
-			</header>
-			<nav>
-				<ul class="navbar">
-					<li>
-						<div @click="menuClick('showCitySel')">
-							<i class="iconfont icon-hangzhengquhua"></i>
-							<div>政区导航</div>
-						</div>
-						<transition name="el-zoom-in-top">
-							<div id="citys" class="city-select panel-popup" v-show="menuStatus['showCitySel']">
-								<div class="layer-title">
-									<h4>政区导航</h4>
-								</div>
-								<div class="layer-search d-center">
-									<input type="text" id="txtSearch" placeholder="请输入政区或地名"
-										onkeypress="if(event.keyCode==13){event.keyCode=9;}">
-									<div class="btn-search d-center" onclick="search()"><i class="el-icon-search"></i>
-									</div>
-								</div>
-								<div class="tab_wrapper">
-									<el-tabs v-model="activeName" @tab-click="handleClick">
-										<el-tab-pane label="中国政区" name="first">
-											<div class="current_city" id="sheng_0">
-												<div class="city_list" id="province-list"></div>
-											</div>
-										</el-tab-pane>
-										<el-tab-pane label="世界国家" name="second">
-											<div class="current_city">
-												<div class="city_list" id="continent-list"></div>
-											</div>
-										</el-tab-pane>
-									</el-tabs>
-									<div class="tab_container" id="resultlist"></div>
-								</div>
-							</div>
-						</transition>
-					</li>
-					<li>
-						<div @click="menuClick('showLayers')">
-							<i class="iconfont icon-layers"></i>
-							<div>图层目录</div>
-						</div>
-						<transition name="el-zoom-in-top">
-							<div id="layers" class="overhide" v-show="menuStatus['showLayers']">
-								<div class="layer-title">
-									<h4>图层目录</h4>
-									<i class="el-icon-close curp" @click="menuStatus['showLayers'] = false"></i>
-								</div>
-								<div class="layer-search d-center">
-									<input type="text" placeholder="请输入">
-									<div class="btn-search d-center"><i class="el-icon-search"></i></div>
-								</div>
-								<!-- 图层 -->
-								<div class="layer-tree">
-									<el-tree :data="layerData" :props="defaultProps" accordion show-checkbox
-										@check="handleCheck" ref="layerTree" node-key="id" :render-after-expand="false"
-										:default-expanded-keys="expandedKeys">
-										<span class="custom-tree-node" slot-scope="{ node, data }">
-											<span class="icon-file"><i class="iconfont icon-gf-folderOpen"></i></span>
-											<span>{{ node.label }}</span>
-										</span>
-									</el-tree>
-								</div>
-							</div>
-						</transition>
-					</li>
-					<li>
-						<div @click="menuClick('showSPA')">
-							<i class="iconfont icon-sousuoleimufill"></i>
-							<div>空间分析</div>
-						</div>
-						<transition name="el-zoom-in-top">
-							<div id="SPA" class="panel-popup" v-if="menuStatus['showSPA']">
-								<div class="layer-title">
-									<h4>空间分析</h4>
-								</div>
-								<ul class="cim-view">
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-icon-chongdie"></i>缓冲区分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-windows-fill"></i>通视分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i class="iconfont icon-zhongdie"></i>叠加分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-keshiyufenxi"></i>可视域分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-tianjixianfenxi"></i>天际线分析</li>
-									<li class="cim-items" @click="SPAClick"><i class="iconfont icon-pouqie"></i>剖切分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i class="iconfont icon-lvdi"></i>绿地率分析</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-colum-height"></i>控高分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon--_podubiaozhu"></i>坡度分析
-									</li>
-									<li class="cim-items" @click="SPAClick"><i
-											class="iconfont icon-denggaoxian"></i>等高面分析
-									</li>
-								</ul>
-							</div>
-						</transition>
-					</li>
-					<li>
-						<div @click="menuClick('showTool')">
-							<i class="iconfont icon-gongjuxiang"></i>
-							<div>工具箱</div>
-						</div>
-						<transition name="el-zoom-in-top">
-							<div id="tools" class="panel-popup" v-if="menuStatus['showTool']">
-								<div class="layer-title">
-									<h4>工具箱</h4>
-								</div>
-								<ul class="cim-view">
-									<li class="cim-items" @click="toolClick"><i
-											class="iconfont icon-icon-chongdie"></i>坐标拾取
-									</li>
-									<li class="cim-items" @click="toolClick"><i
-											class="iconfont icon-windows-fill"></i>空间量算
-									</li>
-									<li class="cim-items" @click="toolClick"><i class="iconfont icon-zhongdie"></i>卷帘对比
-									</li>
-									<li class="cim-items" @click="toolClick"><i
-											class="iconfont icon-keshiyufenxi"></i>多屏对比
-									</li>
-								</ul>
-							</div>
-						</transition>
-					</li>
-				</ul>
-			</nav>
-			<main>
-				<div class="mapContent" id="map"></div>
-				<div class="tool-panel panels">
-					<div>
-						<div class="curr-city__text">中国</div>
+	<div id="app" class="wrap-container wh-100">
+		<header>
+			<div class="title">Geowindows 时空大数据一张图<button type="button" onclick="test()">测试</button></div>
+			<div class="sub-title">Geowindows BIG DATA PLATFORM</div>
+		</header>
+		<nav>
+			<ul class="navbar">
+				<li>
+					<div @click="menuClick('showCitySel')">
+						<i class="iconfont icon-hangzhengquhua"></i>
+						<div>政区导航</div>
 					</div>
-					<div><i class="iconfont icon-icon_tianjia"></i></div>
-					<div><i class="iconfont icon-jianshao"></i></div>
-					<div><i class="iconfont icon-quanping"></i></div>
-					<div><i class="iconfont icon-shanchu"></i></div>
-					<div><i class="iconfont icon-pin"></i></div>
-					<div><i class="iconfont icon-mian"></i></div>
-					<div><i class="iconfont icon-huaduobianxing"></i></div>
-					<div><i class="iconfont icon-Chat-"></i></div>
-				</div>
-
-				<div class="setting-panel panels">
-					<div><i class="iconfont icon-diqiu"></i></div>
-					<div><i class="iconfont icon-icon-"></i></div>
-					<div><i class="iconfont icon-layers"></i></div>
-					<div><i class="iconfont icon-weizhi"></i></div>
-					<div><i class="iconfont icon-tubiao"></i></div>
-					<div><i class="iconfont icon-zengjia"></i></div>
-					<div><i class="iconfont icon-jian_sekuai"></i></div>
-				</div>
-
-				<div class="right-panel panels">
-					<div class="d-between">
-						<div class="panel-content" style="padding-bottom: 0;">
-							<div class="sec-list" v-if="screenageList.length > 0">
-								<div class="subtitle"></div>
-								<ul class="list-checked">
-									<li class="items target-items d-between align-center"
-										v-for="(item, index) in screenageList" :key="parseInt(item.id)"
-										@click="moveLayer(index, $event)">
-										<div class="d-flex align-center list-text">
-											<div class="list-idx">{{index + 1}}.</div>
-											<div class="text-ellipsis" :title="item.name">{{item.name}}</div>
+					<transition name="el-zoom-in-top">
+						<div id="citys" class="city-select panel-popup" v-show="menuStatus['showCitySel']">
+							<div class="layer-title">
+								<h4>政区导航</h4>
+							</div>
+							<div class="layer-search d-center">
+								<input type="text" id="txtSearch" placeholder="请输入政区或地名"
+									onkeypress="if(event.keyCode==13){event.keyCode=9;}">
+								<div class="btn-search d-center" onclick="search()"><i class="el-icon-search"></i>
+								</div>
+							</div>
+							<div class="tab_wrapper">
+								<el-tabs v-model="activeName" @tab-click="handleClick">
+									<el-tab-pane label="中国政区" name="first">
+										<div class="current_city" id="sheng_0">
+											<div class="city_list" id="province-list"></div>
 										</div>
-										<i class="el-icon-delete"
-											style="color: #FFFFFF; font-size: 1rem; cursor: pointer;"
-											@click.stop="removeLayers(item)"></i>
-									</li>
-								</ul>
+									</el-tab-pane>
+									<el-tab-pane label="世界国家" name="second">
+										<div class="current_city">
+											<div class="city_list" id="continent-list"></div>
+										</div>
+									</el-tab-pane>
+								</el-tabs>
+								<div class="tab_container" id="resultlist"></div>
 							</div>
-							<div class="move-list" v-if="screenageList.length > 1">
-								<i class="el-icon-bottom" @click="moveDown"
-									:disabled="currentLayerIndex == screenageList.length - 1 || currentLayerIndex < 0"></i>
-								<i class="el-icon-top" @click="moveUp" :disabled="currentLayerIndex < 1"></i>
-								<i class="el-icon-download"></i>
-								<i class="el-icon-upload2"></i>
+						</div>
+					</transition>
+				</li>
+				<li>
+					<div @click="menuClick('showLayers')">
+						<i class="iconfont icon-layers"></i>
+						<div>图层目录</div>
+					</div>
+					<transition name="el-zoom-in-top">
+						<div id="layers" class="overhide" v-show="menuStatus['showLayers']">
+							<div class="layer-title">
+								<h4>图层目录</h4>
+								<i class="el-icon-close curp" @click="menuStatus['showLayers'] = false"></i>
 							</div>
-							<div class="sec-list setting">
-								<div class="subtitle"></div>
-								<ul>
-									<li class="items d-between align-center">
-										<span class="demonstration">背景亮度</span>
-										<el-slider v-model="paramSetting.bgValue" :disabled="currentLayerIndex < 0"></el-slider>
-									</li>
-									<li class="items d-between align-center">
-										<span class="demonstration">透明度</span>
-										<el-slider v-model="paramSetting.alphaValue" :disabled="currentLayerIndex < 0"></el-slider>
-									</li>
-									<li class="items d-between align-center">
-										<span class="demonstration">对比度</span>
-										<el-slider v-model="paramSetting.contrastValue" :disabled="currentLayerIndex < 0"></el-slider>
-									</li>
-									<li class="items d-between align-center">
-										<span class="demonstration">饱和度</span>
-										<el-slider v-model="paramSetting.saturationValue" :disabled="currentLayerIndex < 0"></el-slider>
-									</li>
-								</ul>
+							<div class="layer-search d-center">
+								<input type="text" placeholder="请输入">
+								<div class="btn-search d-center"><i class="el-icon-search"></i></div>
 							</div>
+							<!-- 图层 -->
+							<div class="layer-tree">
+								<el-tree :data="layerData" :props="defaultProps" accordion show-checkbox
+									@check="handleCheck" ref="layerTree" node-key="id" :render-after-expand="false"
+									:default-expanded-keys="expandedKeys">
+									<span class="custom-tree-node" slot-scope="{ node, data }">
+										<span class="icon-file"><i class="iconfont icon-gf-folderOpen"></i></span>
+										<span>{{ node.label }}</span>
+									</span>
+								</el-tree>
+							</div>
+						</div>
+					</transition>
+				</li>
+				<li>
+					<div @click="menuClick('showSPA')">
+						<i class="iconfont icon-sousuoleimufill"></i>
+						<div>空间分析</div>
+					</div>
+					<transition name="el-zoom-in-top">
+						<div id="SPA" class="panel-popup" v-if="menuStatus['showSPA']">
+							<div class="layer-title">
+								<h4>空间分析</h4>
+							</div>
+							<ul class="cim-view">
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-icon-chongdie"></i>缓冲区分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-windows-fill"></i>通视分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-zhongdie"></i>叠加分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-keshiyufenxi"></i>可视域分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i
+										class="iconfont icon-tianjixianfenxi"></i>天际线分析</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-pouqie"></i>剖切分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-lvdi"></i>绿地率分析</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-colum-height"></i>控高分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon--_podubiaozhu"></i>坡度分析
+								</li>
+								<li class="cim-items" @click="SPAClick"><i class="iconfont icon-denggaoxian"></i>等高面分析
+								</li>
+							</ul>
+						</div>
+					</transition>
+				</li>
+				<li>
+					<div @click="menuClick('showTool')">
+						<i class="iconfont icon-gongjuxiang"></i>
+						<div>工具箱</div>
+					</div>
+					<transition name="el-zoom-in-top">
+						<div id="tools" class="panel-popup" v-if="menuStatus['showTool']">
+							<div class="layer-title">
+								<h4>工具箱</h4>
+							</div>
+							<ul class="cim-view">
+								<li class="cim-items" @click="toolClick"><i class="iconfont icon-icon-chongdie"></i>坐标拾取
+								</li>
+								<li class="cim-items" @click="toolClick"><i class="iconfont icon-windows-fill"></i>空间量算
+								</li>
+								<li class="cim-items" @click="toolClick"><i class="iconfont icon-zhongdie"></i>卷帘对比
+								</li>
+								<li class="cim-items" @click="toolClick"><i class="iconfont icon-keshiyufenxi"></i>多屏对比
+								</li>
+							</ul>
+						</div>
+					</transition>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<div class="mapContent" id="map"></div>
+			<div class="tool-panel panels">
+				<div>
+					<div class="curr-city__text">中国</div>
+				</div>
+				<div><i class="iconfont icon-icon_tianjia"></i></div>
+				<div><i class="iconfont icon-jianshao"></i></div>
+				<div><i class="iconfont icon-quanping"></i></div>
+				<div><i class="iconfont icon-shanchu"></i></div>
+				<div><i class="iconfont icon-pin"></i></div>
+				<div><i class="iconfont icon-mian"></i></div>
+				<div><i class="iconfont icon-huaduobianxing"></i></div>
+				<div><i class="iconfont icon-Chat-"></i></div>
+			</div>
+
+			<div class="setting-panel panels">
+				<div><i class="iconfont icon-diqiu"></i></div>
+				<div><i class="iconfont icon-icon-"></i></div>
+				<div><i class="iconfont icon-layers"></i></div>
+				<div><i class="iconfont icon-weizhi"></i></div>
+				<div><i class="iconfont icon-tubiao"></i></div>
+				<div><i class="iconfont icon-zengjia"></i></div>
+				<div><i class="iconfont icon-jian_sekuai"></i></div>
+			</div>
+
+			<div class="right-panel panels">
+				<div class="d-between">
+					<div class="panel-content" style="padding-bottom: 0;">
+						<div class="sec-list" v-if="screenageList.length > 0">
+							<div class="subtitle"></div>
+							<ul class="list-checked">
+								<li class="items target-items d-between align-center"
+									v-for="(item, index) in screenageList" :key="parseInt(item.id)"
+									@click="moveLayer(index, $event)">
+									<div class="d-flex align-center list-text">
+										<div class="list-idx">{{index + 1}}.</div>
+										<div class="text-ellipsis" :title="item.name">{{item.name}}</div>
+									</div>
+									<i class="el-icon-delete" style="color: #FFFFFF; font-size: 1rem; cursor: pointer;"
+										@click.stop="removeLayers(item)"></i>
+								</li>
+							</ul>
+						</div>
+						<div class="move-list" v-if="screenageList.length > 1">
+							<i class="el-icon-bottom" @click="moveDown"
+								:disabled="currentLayerIndex == screenageList.length - 1 || currentLayerIndex < 0"></i>
+							<i class="el-icon-top" @click="moveUp" :disabled="currentLayerIndex < 1"></i>
+							<i class="el-icon-download"></i>
+							<i class="el-icon-upload2"></i>
+						</div>
+						<div class="sec-list setting">
+							<div class="subtitle"></div>
+							<ul>
+								<li class="items d-between align-center">
+									<span class="demonstration">背景亮度</span>
+									<el-slider v-model="paramSetting.bgValue"
+										:disabled="currentLayerIndex < 0"></el-slider>
+								</li>
+								<li class="items d-between align-center">
+									<span class="demonstration">透明度</span>
+									<el-slider v-model="paramSetting.alphaValue"
+										:disabled="currentLayerIndex < 0"></el-slider>
+								</li>
+								<li class="items d-between align-center">
+									<span class="demonstration">对比度</span>
+									<el-slider v-model="paramSetting.contrastValue"
+										:disabled="currentLayerIndex < 0"></el-slider>
+								</li>
+								<li class="items d-between align-center">
+									<span class="demonstration">饱和度</span>
+									<el-slider v-model="paramSetting.saturationValue"
+										:disabled="currentLayerIndex < 0"></el-slider>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- slider start -->
-				<div class="bottom-panel panels hide" v-if="sliderShow">
-					<div ng-app="rzSliderDemo">
-						<div ng-controller="MainCtrl" class="wrapper">
-							<article>
-								<rzslider rz-slider-model="slider_dates.value" rz-slider-options="slider_dates.options">
-								</rzslider>
-							</article>
-						</div>
+			<!-- slider start -->
+			<div class="bottom-panel panels hide" v-if="sliderShow">
+				<div ng-app="rzSliderDemo">
+					<div ng-controller="MainCtrl" class="wrapper">
+						<article>
+							<rzslider rz-slider-model="slider_dates.value" rz-slider-options="slider_dates.options">
+							</rzslider>
+						</article>
 					</div>
 				</div>
+			</div>
 
-				<!-- layer -->
-				<div class="layer-panel">
-					<div class="layer-sl active"><span>矢量</span></div>
-					<div class="layer-yx"><span>影像</span></div>
-					<div class="layer-ls"><span>历史</span></div>
-				</div>
-			</main>
-		</div>
-		<script type="module">
-			import { citys as t } from './js/china_city.js'
-			window.vue = new Vue({
-				el: '#app',
-				data() {
-					return {
-						// 图层数据
-						layerData: [],
-						defaultProps: {
-							children: 'children',
-							label: 'name'
-						},
-						// 图层列表
-						screenageList: [{
-							"pId": 1,
-							"name": "矢量瓦片",
-							"id": 3,
-							"layerid": "mp_vector",
-							"type": "vector",
-							"style": "data/streets.json"
-						}],
-						// 参数设置
-						paramSetting: {
-							bgValue: 0,
-							alphaValue: 0,
-							contrastValue: 0,
-							saturationValue: 0
-						},
-						// slider显示状态
-						sliderShow: true,
-						selectedCity: {
-							code: "100000",
-							cname: "全国",
-							ename: "whole country",
-							pyname: "",
-							lon: "116.40717",
-							lat: "39.90469"
-						},
-						// 本地城市数据
-						cityData: t,
-						// 热门城市
-						hotCity: [],
-						// 按省份排名
-						provinceLetter: ["A", "F", "G", "H", "J", "L", "N", "Q", "S", "T", "X", "Y", "Z"],
-						// 省市列表
-						provinceList: [],
-						// 城市列表
-						cityList: [],
-						// 城市搜索
-						keyWord: '',
-						activeName: 'first',
-						menuStatus: {
-							showCitySel: false,
-							showLayers: false,
-							showSPA: false,
-							showTool: false
-						},
-						// 当前图层列表中选中图层
-						currentLayerIndex: -1,
-						// 默认展开节点
-						expandedKeys: []
-					}
-				},
-
-				computed: {
-					searchList() {
-						//使用filter过滤数组，通过includes方法查找cname中是否包含search的内容
-						return this.cityList.filter((item) => this.keyWord != '' && item.cname.includes(this.keyWord))
+			<!-- layer -->
+			<div class="layer-panel">
+				<div class="layer-sl active" @click="changeMapType('矢量')"><span>矢量</span></div>
+				<div class="layer-yx" @click="changeMapType('影像')"><span>影像</span></div>
+				<div class="layer-ls" @click="changeMapType('历史')"><span>历史</span></div>
+			</div>
+		</main>
+	</div>
+	<script type="module">
+		import { citys as t } from './js/china_city.js'
+		window.vue = new Vue({
+			el: '#app',
+			data() {
+				return {
+					// 图层数据
+					layerData: [],
+					defaultProps: {
+						children: 'children',
+						label: 'name'
 					},
-				},
-
-				mounted() {
-					this.initSlider()
-					this.getCity()
-					$('.tool-panel > div, .layer-panel > div, .setting-panel > div').on('click', function (e) {
-						$(e.currentTarget).addClass('active').siblings().removeClass('active')
-					})
-					let _this = this
-					$.getJSON({
-						url: "data/layerdata.json",
-						success: function (res) {
-							let data = _this.toTreeData(res, 'id', 'pId', 'name')
-							setTimeout(() => {
-								_this.layerData = data
-							}, 100)
-						}
-					});
-
-				},
-
-				methods: {
-					/** 拖拽 */
-					drag() {
-						let drag = document.getElementById('layers');
-						drag.onmousedown = function (e) {
-							let diffX = e.clientX - drag.offsetLeft; //鼠标距box边框的距离
-							let diffY = e.clientY - drag.offsetTop;
-							document.onmousemove = function (e) {
-								let left = e.clientX - diffX;
-								let top = e.clientY - diffY;
-								let navHei = $('.navbar').innerHeight()
-								//控制在视窗内
-								if (left < 0) {
-									left = 0;
-								} else if (left > window.innerWidth - drag.offsetWidth) {
-									left = window.innerWidth - drag.offsetWidth;
-								}
-								if (top < 0) {
-									top = 0;
-								}
-
-								drag.style.left = left + 'px';
-								drag.style.top = top + 'px';
-							};
-							document.onmouseup = function (e) {
-								this.onmousemove = null;
-								this.onmouseup = null;
-							};
-						};
+					// 图层列表
+					screenageList: [{
+						"pId": 1,
+						"name": "矢量瓦片",
+						"id": 3,
+						"layerid": "mp_vector",
+						"type": "vector",
+						"style": "data/streets.json"
+					}],
+					// 参数设置
+					paramSetting: {
+						bgValue: 0,
+						alphaValue: 0,
+						contrastValue: 0,
+						saturationValue: 0
 					},
-
-					/** menu点击事件 */
-					menuClick(key) {
-						this.$set(this.menuStatus, key, !this.menuStatus[key])
-						for (let item in this.menuStatus) {
-							if (item != key) {
-								this.menuStatus[item] = false
-							}
-						}
-						if (key == 'showLayers') {
-							this.$nextTick(() => {
-								this.drag()
-							})
-						}
+					// slider显示状态
+					sliderShow: true,
+					selectedCity: {
+						code: "100000",
+						cname: "全国",
+						ename: "whole country",
+						pyname: "",
+						lon: "116.40717",
+						lat: "39.90469"
 					},
-
-					handleCheck(data, checked) {
-						let checkStatus = checked.checkedKeys.includes(data.id)
-						checkLayerTreeNode(data, checkStatus);
+					// 本地城市数据
+					cityData: t,
+					// 热门城市
+					hotCity: [],
+					// 按省份排名
+					provinceLetter: ["A", "F", "G", "H", "J", "L", "N", "Q", "S", "T", "X", "Y", "Z"],
+					// 省市列表
+					provinceList: [],
+					// 城市列表
+					cityList: [],
+					// 城市搜索
+					keyWord: '',
+					activeName: 'first',
+					menuStatus: {
+						showCitySel: false,
+						showLayers: false,
+						showSPA: false,
+						showTool: false
 					},
-
-					/** 获取省市 */
-					getCity() {
-						const t = [];
-						this.cityData.data.forEach((e => { "100000" === e.code ? this.hotCity = e.list : t.push(e) }))
-						this.provinceLetter.forEach((e => {
-							const i = {
-								head: e,
-								list: []
-							};
-							t.forEach((t => {
-								t && t.ename.substr(0, 1) === e && i.list.push(t)
-							})),
-								this.provinceList.push(i)
-						}))
-						let s = []
-						t.forEach((t => {
-							t.list.forEach((t => {
-								t && s.push(t)
-							}))
-						}))
-						this.cityList = [...s, ...this.hotCity]
-					},
-
-					/** 空间分析项选择 */
-					SPAClick() {
-						this.menuStatus.showSPA = false
-					},
-
-					/** 工具箱项选择 */
-					toolClick() {
-						this.menuStatus.showTool = false
-					},
-
-					/** 选择城市 */
-					cityClick(item) {
-						this.menuStatus.selectedCity = item
-					},
-
-					/** Slider初始化 */
-					initSlider() {
-						var app = angular.module('rzSliderDemo', ['rzSlider', 'ui.bootstrap']);
-						app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $modal) {
-							$scope.slider_dates = {
-								value: '2022-12',
-								options: {
-									stepsArray: ['1980-12', '2022-12'],
-									showTicksValues: 0
-								}
-							};
-						});
-					},
-
-
-					// 图层数据整理
-					toTreeData(data, id, pId, name) {
-						let parent = [];
-						for (let i = 0; i < data.length; i++) {
-							if (data[i][pId] == '0') {
-								let obj = {
-									...data[i],
-									children: []
-								};
-								if (data[i].nocheck) {
-									obj.disabled = true
-								}
-								parent.push(obj);
-							}
-						}
-						// 调用子节点方法,参数为父节点的数组
-						return this.children(parent, data, id, pId);
-					},
-
-
-					// 子节点数据
-					children(parent, data, id, pId, name) {
-						//给当前数据的直系子节点添加剩下的子节点
-						let _this = this;
-						if (data) {
-							for (let i = 0; i < parent.length; i++) {
-								for (let j = 0; j < data.length; j++) {
-									if (parent[i].id == data[j][pId]) {
-										let obj = {
-											...data[j],
-											children: []
-										};
-										if (data[j].nocheck) {
-											obj.disabled = true
-										}
-										if (data[j].subtree) {
-											$.getJSON("data/" + data[j].subtree, data => {
-												obj.children = _this.toTreeData(data, 'id', 'pId', 'name')
-											})
-										}
-										parent[i].children.push(obj);
-									}
-								}
-								_this.children(parent[i].children, data, id, pId);
-							}
-						}
-						return parent
-					},
-
-
-					// tab切换
-					handleClick(tab, event) {
-						if (this.activeName == 'first') {
-							$("#resultlist").empty()
-						} else {
-							$("#resultlist").empty()
-						}
-					},
-
-					toggleNav() {
-						if (!$('nav > input')[0].checked) {
-							[this.menuStatus.showLayers, this.menuStatus.showCitySel, this.menuStatus.showSPA, this.menuStatus.showTool] = [false, false, false, false]
-						}
-					},
-
-					/** 移除图层 */
-					removeLayers(item) {
-						// 取消选中
-						this.$refs.layerTree.setChecked(item, false);
-						// 删除列表
-						this.screenageList = this.screenageList.filter(obj => obj.id != item.id)
-						this.currentLayerIndex = -1;
-					},
-
-					/** 调整图层顺序 */
-					moveLayer(index, event) {
-						$(event.currentTarget).addClass('active').siblings().removeClass('active')
-						this.currentLayerIndex = index
-					},
-
-					/** 上移 */
-					moveUp() {
-						if (this.currentLayerIndex == 0) return
-						const arr = this.screenageList
-						arr.splice(this.currentLayerIndex - 1, 1, ...arr.splice(this.currentLayerIndex, 1, arr[this.currentLayerIndex - 1]))
-						this.currentLayerIndex--
-					},
-
-					moveDown() {
-						if (this.currentLayerIndex == this.screenageList.length - 1) return
-						const arr = this.screenageList
-						arr.splice(this.currentLayerIndex, 1, ...arr.splice(this.currentLayerIndex + 1, 1, arr[this.currentLayerIndex]))
-						this.currentLayerIndex++
-					}
+					// 当前图层列表中选中图层
+					currentLayerIndex: -1,
+					// 默认展开节点
+					expandedKeys: []
 				}
-			})
+			},
 
-		</script>
-	</body>
-	<style>
-		.rzslider {
-			margin: 25px 0 25px 0;
-		}
+			computed: {
+				searchList() {
+					//使用filter过滤数组，通过includes方法查找cname中是否包含search的内容
+					return this.cityList.filter((item) => this.keyWord != '' && item.cname.includes(this.keyWord))
+				},
+			},
 
-		.rzslider .rz-pointer {
-			top: -6px;
-			width: 16px;
-			height: 16px;
-		}
+			mounted() {
+				this.initSlider()
+				this.getCity()
+				$('.tool-panel > div, .layer-panel > div, .setting-panel > div').on('click', function (e) {
+					$(e.currentTarget).addClass('active').siblings().removeClass('active')
+				})
+				let _this = this
+				$.getJSON({
+					url: "data/layerdata.json",
+					success: function (res) {
+						let data = _this.toTreeData(res, 'id', 'pId', 'name')
+						setTimeout(() => {
+							_this.layerData = data
+						}, 100)
+					}
+				});
 
-		.rzslider .rz-pointer.rz-active {
-			border: 0;
-			outline: none;
-		}
+			},
 
-		.rzslider .rz-bubble,
-		.rzslider .rz-bubble.rz-limit {
-			color: #317cf0;
-			bottom: 10px;
-		}
+			methods: {
+				/** 拖拽 */
+				drag() {
+					let drag = document.getElementById('layers');
+					drag.onmousedown = function (e) {
+						let diffX = e.clientX - drag.offsetLeft; //鼠标距box边框的距离
+						let diffY = e.clientY - drag.offsetTop;
+						document.onmousemove = function (e) {
+							let left = e.clientX - diffX;
+							let top = e.clientY - diffY;
+							let navHei = $('.navbar').innerHeight()
+							//控制在视窗内
+							if (left < 0) {
+								left = 0;
+							} else if (left > window.innerWidth - drag.offsetWidth) {
+								left = window.innerWidth - drag.offsetWidth;
+							}
+							if (top < 0) {
+								top = 0;
+							}
 
-		.rzslider .rz-pointer:after {
-			top: 4px;
-			left: 4px;
-		}
+							drag.style.left = left + 'px';
+							drag.style.top = top + 'px';
+						};
+						document.onmouseup = function (e) {
+							this.onmousemove = null;
+							this.onmouseup = null;
+						};
+					};
+				},
 
-		.rzslider .rz-tick {
-			margin-left: 3px;
-		}
+				/** menu点击事件 */
+				menuClick(key) {
+					this.$set(this.menuStatus, key, !this.menuStatus[key])
+					for (let item in this.menuStatus) {
+						if (item != key) {
+							this.menuStatus[item] = false
+						}
+					}
+					if (key == 'showLayers') {
+						this.$nextTick(() => {
+							this.drag()
+						})
+					}
+				},
 
-		.rzslider .rz-pointer.rz-active:after {
-			background-color: #FFFFFF;
-		}
+				handleCheck(data, checked) {
+					let checkStatus = checked.checkedKeys.includes(data.id)
+					checkLayerTreeNode(data, checkStatus);
+				},
 
-		.rzslider .rz-ticks-values-under .rz-tick-value {
-			bottom: -20px;
-			color: #767676;
-		}
+				/** 获取省市 */
+				getCity() {
+					const t = [];
+					this.cityData.data.forEach((e => { "100000" === e.code ? this.hotCity = e.list : t.push(e) }))
+					this.provinceLetter.forEach((e => {
+						const i = {
+							head: e,
+							list: []
+						};
+						t.forEach((t => {
+							t && t.ename.substr(0, 1) === e && i.list.push(t)
+						})),
+							this.provinceList.push(i)
+					}))
+					let s = []
+					t.forEach((t => {
+						t.list.forEach((t => {
+							t && s.push(t)
+						}))
+					}))
+					this.cityList = [...s, ...this.hotCity]
+				},
 
-		.rzslider .rz-tick-value {
-			display: none;
-		}
+				/** 空间分析项选择 */
+				SPAClick() {
+					this.menuStatus.showSPA = false
+				},
 
-		.rzslider .rz-tick-legend {
-			top: 15px;
-			max-width: unset;
-			white-space: nowrap;
-		}
+				/** 工具箱项选择 */
+				toolClick() {
+					this.menuStatus.showTool = false
+				},
 
-		.el-checkbox.is-disabled {
-			display: none;
-		}
-	</style>
+				/** 选择城市 */
+				cityClick(item) {
+					this.menuStatus.selectedCity = item
+				},
+
+				/** Slider初始化 */
+				initSlider() {
+					var app = angular.module('rzSliderDemo', ['rzSlider', 'ui.bootstrap']);
+					app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $modal) {
+						$scope.slider_dates = {
+							value: '2022-12',
+							options: {
+								stepsArray: ['1980-12', '2022-12'],
+								showTicksValues: 0
+							}
+						};
+					});
+				},
+
+
+				// 图层数据整理
+				toTreeData(data, id, pId, name) {
+					let parent = [];
+					for (let i = 0; i < data.length; i++) {
+						if (data[i][pId] == '0') {
+							let obj = {
+								...data[i],
+								children: []
+							};
+							if (data[i].nocheck) {
+								obj.disabled = true
+							}
+							parent.push(obj);
+						}
+					}
+					// 调用子节点方法,参数为父节点的数组
+					return this.children(parent, data, id, pId);
+				},
+
+
+				// 子节点数据
+				children(parent, data, id, pId, name) {
+					//给当前数据的直系子节点添加剩下的子节点
+					let _this = this;
+					if (data) {
+						for (let i = 0; i < parent.length; i++) {
+							for (let j = 0; j < data.length; j++) {
+								if (parent[i].id == data[j][pId]) {
+									let obj = {
+										...data[j],
+										children: []
+									};
+									if (data[j].nocheck) {
+										obj.disabled = true
+									}
+									if (data[j].subtree) {
+										$.getJSON("data/" + data[j].subtree, data => {
+											obj.children = _this.toTreeData(data, 'id', 'pId', 'name')
+										})
+									}
+									parent[i].children.push(obj);
+								}
+							}
+							_this.children(parent[i].children, data, id, pId);
+						}
+					}
+					return parent
+				},
+
+
+				// tab切换
+				handleClick(tab, event) {
+					if (this.activeName == 'first') {
+						$("#resultlist").empty()
+					} else {
+						$("#resultlist").empty()
+					}
+				},
+
+				toggleNav() {
+					if (!$('nav > input')[0].checked) {
+						[this.menuStatus.showLayers, this.menuStatus.showCitySel, this.menuStatus.showSPA, this.menuStatus.showTool] = [false, false, false, false]
+					}
+				},
+
+				/** 移除图层 */
+				removeLayers(item) {
+					// 取消选中
+					this.$refs.layerTree.setChecked(item, false);
+					// 删除列表
+					this.screenageList = this.screenageList.filter(obj => obj.id != item.id)
+					this.currentLayerIndex = -1;
+				},
+
+				/** 调整图层顺序 */
+				moveLayer(index, event) {
+					$(event.currentTarget).addClass('active').siblings().removeClass('active')
+					this.currentLayerIndex = index
+				},
+
+				/** 上移 */
+				moveUp() {
+					if (this.currentLayerIndex == 0) return
+					const arr = this.screenageList
+					arr.splice(this.currentLayerIndex - 1, 1, ...arr.splice(this.currentLayerIndex, 1, arr[this.currentLayerIndex - 1]))
+					this.currentLayerIndex--
+				},
+
+				moveDown() {
+					if (this.currentLayerIndex == this.screenageList.length - 1) return
+					const arr = this.screenageList
+					arr.splice(this.currentLayerIndex, 1, ...arr.splice(this.currentLayerIndex + 1, 1, arr[this.currentLayerIndex]))
+					this.currentLayerIndex++
+				}
+			}
+		})
+
+	</script>
+</body>
+<style>
+	.rzslider {
+		margin: 25px 0 25px 0;
+	}
+
+	.rzslider .rz-pointer {
+		top: -6px;
+		width: 16px;
+		height: 16px;
+	}
+
+	.rzslider .rz-pointer.rz-active {
+		border: 0;
+		outline: none;
+	}
+
+	.rzslider .rz-bubble,
+	.rzslider .rz-bubble.rz-limit {
+		color: #317cf0;
+		bottom: 10px;
+	}
+
+	.rzslider .rz-pointer:after {
+		top: 4px;
+		left: 4px;
+	}
+
+	.rzslider .rz-tick {
+		margin-left: 3px;
+	}
+
+	.rzslider .rz-pointer.rz-active:after {
+		background-color: #FFFFFF;
+	}
+
+	.rzslider .rz-ticks-values-under .rz-tick-value {
+		bottom: -20px;
+		color: #767676;
+	}
+
+	.rzslider .rz-tick-value {
+		display: none;
+	}
+
+	.rzslider .rz-tick-legend {
+		top: 15px;
+		max-width: unset;
+		white-space: nowrap;
+	}
+
+	.el-checkbox.is-disabled {
+		display: none;
+	}
+
+	.rz-model-value {
+		visibility: visible !important;
+	}
+</style>
 
 </html>

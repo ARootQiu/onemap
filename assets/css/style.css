@@ -141,7 +141,7 @@ nav {
 	background: linear-gradient(to right, rgba(41, 63, 109, 0.8), rgba(41, 63, 109, 0.5), rgba(41, 63, 109, 0.2), rgba(41, 63, 109, 0))
 }
 
-.navbar li > div:nth-child(1) {
+.navbar li>div:nth-child(1) {
 	height: 81px;
 	margin-top: 8px;
 	background-color: rgba(0, 23, 65, 1);
@@ -155,7 +155,7 @@ nav {
 
 }
 
-.navbar li > div:nth-child(1) .iconfont {
+.navbar li>div:nth-child(1) .iconfont {
 	font-size: 26px;
 }
 
@@ -170,7 +170,7 @@ nav {
 	background-color: #FFFFFF;
 }
 
-.layer-panel > div {
+.layer-panel>div {
 	width: 70px;
 	height: 50px;
 	position: relative;
@@ -179,11 +179,11 @@ nav {
 	border: 2px solid transparent;
 }
 
-.layer-panel > div.active {
+.layer-panel>div.active {
 	border: 2px solid #46a5fc;
 }
 
-.layer-panel > div span {
+.layer-panel>div span {
 	padding: 0 3px;
 	display: inline-block;
 	position: absolute;
@@ -224,19 +224,16 @@ nav {
 	right: 2px;
 	bottom: 20px;
 	background-color: rgba(0, 17, 56, 1);
-	box-shadow: 0px 0px 16px 0px 
-		rgba(58, 58, 58, 0.59), 
-		inset 0px 0px 6px 1px 
-		rgba(16, 108, 222, 0.22), 
-		inset 0px 0px 13px 1px 
-		rgba(0, 114, 255, 0.8);
+	box-shadow: 0px 0px 16px 0px rgba(58, 58, 58, 0.59),
+		inset 0px 0px 6px 1px rgba(16, 108, 222, 0.22),
+		inset 0px 0px 13px 1px rgba(0, 114, 255, 0.8);
 	border-radius: 5px;
 }
 
 .tool-panel .iconfont {
 	color: #FFFFFF;
 }
- 
+
 .tool-panel>div {
 	padding: 10px;
 	cursor: pointer;
@@ -244,7 +241,7 @@ nav {
 }
 
 .tool-panel>div:hover,
-.tool-panel > div.active {
+.tool-panel>div.active {
 	background-color: #003ba8;
 }
 
@@ -431,7 +428,7 @@ nav {
 	color: #FFFFFF;
 }
 
-.setting-panel > div {
+.setting-panel>div {
 	width: 37px;
 	height: 40px;
 	background-color: #0c2150;
@@ -442,9 +439,10 @@ nav {
 	cursor: pointer;
 }
 
-.setting-panel > div.active {
+.setting-panel>div.active {
 	background-color: #003ba8;
 }
+
 /* 图层目录 style */
 #layers {
 	width: 330px;
@@ -636,7 +634,7 @@ nav {
 	left: var(--nav-width);
 	top: 10px;
 	background-color: rgba(1, 35, 98, 0.86x);
-	border: solid 1px #4d81c2;	
+	border: solid 1px #4d81c2;
 }
 
 .city-select::after {

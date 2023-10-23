@@ -1,0 +1,6914 @@
+{
+	"solution": {
+		"bearing": 0,
+		"center": "[116.40717,39.90469]",
+		"describe": "",
+		"icon": "standard",
+		"maxZoom": 19,
+		"minZoom": 3,
+		"name": "标准地图",
+		"pitch": 0,
+		"template": "0",
+		"zoom": 10.300000190734864
+	},
+	"sources": {
+		"Merge_2": {
+			"tiles": [
+			"https://minedata.com.cn/service/data/mvt-layer?datasource=merge2&z={z}&x={x}&y={y}&request=GetTile&key=ca78282dfff148e3be5390ce027068f5&solu=16926&source=minemap"				
+			],
+			"type": "vector"
+		}
+	},
+	"sprite": "https://minedata.com.cn/minemapapi/v2.1.0/sprite/sprite",
+	"glyphs": "https://minedata.com.cn/minemapapi/v2.1.0/fonts/{fontstack}/{range}.pbf",
+	"layers": [
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"background-color": "#f5f5f5"
+			},
+			"layerInfo": {
+				"zindex": 0,
+				"datatype": "background",
+				"prefix": "",
+				"sourcemaxzoom": 22,
+				"groupid": "",
+				"name": "背景",
+				"describe": "背景",
+				"source": "",
+				"groupname": "",
+				"sourceminzoom": 0
+			},
+			"source": "",
+			"source-layer": "",
+			"id": "fa9115e7a7f44b0f8a1e72e3f028dc78",
+			"type": "background",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#f9f9f9",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 1,
+				"datatype": "fill",
+				"prefix": "106010",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "工业区",
+				"describe": "工业区",
+				"source": "landuse_industrial",
+				"groupname": "区域面",
+				"sourceminzoom": 13
+			},
+			"source": "Merge_2",
+			"source-layer": "landuse_industrial",
+			"id": "7b0d2cf9d55247f08e7eff30345930c7",
+			"type": "fill",
+			"minzoom": 13
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#e9e9e9",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 2,
+				"datatype": "fill",
+				"prefix": "106004",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "小区面",
+				"describe": "小区面",
+				"source": "residential_polygon",
+				"groupname": "区域面",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "residential_polygon",
+			"id": "b3968076f6394c1fb1b6ce2228bf3a7d",
+			"type": "fill",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#f0f0f0",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 3,
+				"datatype": "fill",
+				"prefix": "106007",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "商业场所",
+				"describe": "商业场所",
+				"source": "landuse_commercial",
+				"groupname": "区域面",
+				"sourceminzoom": 13
+			},
+			"source": "Merge_2",
+			"source-layer": "landuse_commercial",
+			"id": "22cf582979954482b40abb08ba960ff2",
+			"type": "fill",
+			"minzoom": 13
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#cee9f5",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 4,
+				"datatype": "fill",
+				"prefix": "106006",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "教育文化",
+				"describe": "教育文化",
+				"source": "landuse_education",
+				"groupname": "区域面",
+				"sourceminzoom": 12
+			},
+			"source": "Merge_2",
+			"source-layer": "landuse_education",
+			"id": "506ac8986d2943f7b8ad1dfa176f3583",
+			"type": "fill",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#f5dcdc",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 5,
+				"datatype": "fill",
+				"prefix": "106003",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "医疗卫生",
+				"describe": "医疗卫生",
+				"source": "landuse_medical",
+				"groupname": "区域面",
+				"sourceminzoom": 13
+			},
+			"source": "Merge_2",
+			"source-layer": "landuse_medical",
+			"id": "d25a8b3208734c819182acbd8956ce76",
+			"type": "fill",
+			"minzoom": 13
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#cee9f5",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 6,
+				"datatype": "fill",
+				"prefix": "106005",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "交通枢纽",
+				"describe": "交通枢纽",
+				"source": "landuse_transportation",
+				"groupname": "区域面",
+				"sourceminzoom": 13
+			},
+			"source": "Merge_2",
+			"source-layer": "landuse_transportation",
+			"id": "2006e82c3b1546c89d551cf535147c8a",
+			"type": "fill",
+			"minzoom": 13
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#afe6c5",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 7,
+				"datatype": "fill",
+				"prefix": "106001",
+				"sourcemaxzoom": 20,
+				"groupid": "20601ebc",
+				"name": "绿地面",
+				"describe": "绿地面",
+				"source": "green_surface",
+				"groupname": "区域面",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "green_surface",
+			"id": "1596a2f1ba0c482aab1295464652d5b8",
+			"type": "fill",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-color": "#9fd7fc",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 8,
+				"datatype": "fill",
+				"prefix": "102",
+				"sourcemaxzoom": 20,
+				"groupid": "a9f6272b",
+				"name": "水域面",
+				"describe": "水域面",
+				"source": "water_surface",
+				"groupname": "水系",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "water_surface",
+			"id": "5dd76c85344e447c919db1f4e27a288c",
+			"type": "fill",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 19.5,
+			"paint": {
+				"fill-color": "#f5f5f5",
+				"fill-antialias": false
+			},
+			"layerInfo": {
+				"zindex": 9,
+				"datatype": "fill",
+				"prefix": "",
+				"sourcemaxzoom": 19.5,
+				"groupid": "a9f6272b",
+				"name": "水系-岛屿",
+				"describe": "岛屿",
+				"source": "island",
+				"groupname": "水系",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "island",
+			"id": "ab88b7ec383e461c93dcbc50f475b917",
+			"type": "fill",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 7,
+			"paint": {
+				"line-width": 1,
+				"line-color": "#9fd7fc"
+			},
+			"layerInfo": {
+				"zindex": 10,
+				"datatype": "line",
+				"prefix": "102",
+				"sourcemaxzoom": 8.5,
+				"groupid": "a9f6272b",
+				"name": "单线河",
+				"describe": "单线河",
+				"source": "water_line",
+				"groupname": "水系",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "water_line",
+			"id": "5614b182996f418193113612d89d1acb",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#5a8ec1",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 11,
+				"datatype": "symbol",
+				"prefix": "102",
+				"sourcemaxzoom": 20,
+				"groupid": "a9f6272b",
+				"name": "湖泊名",
+				"describe": "湖泊名",
+				"source": "lake_name",
+				"groupname": "水系",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "lake_name",
+			"id": "fd1fc2c7cf2c48aa9c1c0ba9e0bf61fd",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": {
+					"stops": [
+						[
+							1,
+							9
+						],
+						[
+							3,
+							10
+						],
+						[
+							4,
+							13
+						],
+						[
+							7,
+							15
+						]
+					],
+					"base": 1
+				},
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 8.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#5a8ec1",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 12,
+				"datatype": "symbol",
+				"prefix": "102",
+				"sourcemaxzoom": 8.5,
+				"groupid": "a9f6272b",
+				"name": "海域名",
+				"describe": "海域名",
+				"source": "world_sea_name",
+				"groupname": "水系",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_sea_name",
+			"id": "8727753204b44ac9b04490795038481c",
+			"type": "symbol",
+			"minzoom": 3
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "butt",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							7,
+							1
+						],
+						[
+							18,
+							3.6
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#d4d4d4"
+			},
+			"layerInfo": {
+				"zindex": 13,
+				"datatype": "line",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "78803025",
+				"name": "铁路_实线",
+				"describe": "铁路",
+				"source": "railway",
+				"groupname": "铁路",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "railway",
+			"id": "78a3ba11b21b4d33a8d22e1dbc82572e",
+			"type": "line",
+			"minzoom": 7
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "butt",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							7,
+							1
+						],
+						[
+							18,
+							3.6
+						]
+					],
+					"base": 1
+				},
+				"line-dasharray": [
+					9,
+					9
+				],
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 14,
+				"datatype": "line",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "78803025",
+				"name": "铁路_虚线",
+				"describe": "铁路",
+				"source": "railway",
+				"groupname": "铁路",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "railway",
+			"id": "10f2c3c3aeb4489fb2b6fc4473248129",
+			"type": "line",
+			"minzoom": 7
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							10,
+							1
+						],
+						[
+							18,
+							3
+						]
+					],
+					"base": 1
+				},
+				"line-dasharray": [
+					3,
+					3
+				],
+				"line-color": "#6899c9"
+			},
+			"layerInfo": {
+				"zindex": 15,
+				"datatype": "line",
+				"prefix": "101013",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "轮渡",
+				"describe": "轮渡",
+				"source": "ferryRoad",
+				"groupname": "道路",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "ferryRoad",
+			"id": "3c86d36a0e1a4e749684f162f0a9a1bb",
+			"type": "line",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.3
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							3
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dedede"
+			},
+			"layerInfo": {
+				"zindex": 16,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "步行隧道",
+				"describe": "步行隧道",
+				"source": "tunnel_pedestrianRoad",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_pedestrianRoad",
+			"id": "c140e83a47954e749414804e48f9ed25",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.5
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							4
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dedede"
+			},
+			"layerInfo": {
+				"zindex": 17,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "其他隧道",
+				"describe": "其他隧道",
+				"source": "tunnel_otherRoad",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_otherRoad",
+			"id": "d9bb3adab30e49f8acd0dd2225aeb18b",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dedede"
+			},
+			"layerInfo": {
+				"zindex": 18,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "乡镇村道隧道",
+				"describe": "乡镇村道隧道",
+				"source": "tunnel_countryHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_countryHighway",
+			"id": "99b68a07f9cc46e298e86bc69fb9cea4",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dedede"
+			},
+			"layerInfo": {
+				"zindex": 19,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "县道隧道",
+				"describe": "县道隧道",
+				"source": "tunnel_prefecturalHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_prefecturalHighway",
+			"id": "426c37ab4a744df489859816e288ad05",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4d37f"
+			},
+			"layerInfo": {
+				"zindex": 20,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "国省道隧道",
+				"describe": "国省道隧道",
+				"source": "tunnel_natProHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_natProHighway",
+			"id": "5dbf0f29519f4c1ba8e13acb7c8e5071",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dbac09"
+			},
+			"layerInfo": {
+				"zindex": 21,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "城市高速隧道",
+				"describe": "城市高速隧道",
+				"source": "tunnel_city_expressway",
+				"groupname": "道路",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_city_expressway",
+			"id": "6563ceeeb9884b7688c231f18f435daf",
+			"type": "line",
+			"minzoom": 5
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#dbac09"
+			},
+			"layerInfo": {
+				"zindex": 22,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "高速隧道",
+				"describe": "高速隧道",
+				"source": "tunnel_expressway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "tunnel_expressway",
+			"id": "de6fed9639814b009900bb45edabd4ab",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.3
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							3
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 23,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "步行路在建",
+				"describe": "步行路在建",
+				"source": "const_pedestrianRoad",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_pedestrianRoad",
+			"id": "f747ec24eae74a69925d0debb6e8bccc",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.3
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							3
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 24,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "步行路",
+				"describe": "步行路",
+				"source": "pedestrianRoad",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "pedestrianRoad",
+			"id": "783f88112b1f46d38bcd5b71d0183cf2",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.5
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							4
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 25,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "其他在建",
+				"describe": "其他在建",
+				"source": "const_otherRoad",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_otherRoad",
+			"id": "9692b76da88b472f9e5389ab50a7b8cd",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							0.5
+						],
+						[
+							15,
+							2
+						],
+						[
+							16,
+							4
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 26,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "其他道路",
+				"describe": "其他道路",
+				"source": "otherRoad",
+				"groupname": "道路",
+				"sourceminzoom": 12
+			},
+			"source": "Merge_2",
+			"source-layer": "otherRoad",
+			"id": "841ae4e366d14a1a98e08974c7c9c615",
+			"type": "line",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 27,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "乡镇村道在建",
+				"describe": "乡镇村道在建",
+				"source": "const_countryHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_countryHighway",
+			"id": "0433f2dd20594f7db4e85dd9b37e5bd5",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							12,
+							1
+						],
+						[
+							14,
+							2
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 28,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "乡镇村道",
+				"describe": "乡镇村道",
+				"source": "countryHighway",
+				"groupname": "道路",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "countryHighway",
+			"id": "bcc0ecd876c84ef69f3bb3d5b78aaa0d",
+			"type": "line",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 29,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "县道在建",
+				"describe": "县道在建",
+				"source": "const_prefecturalHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_prefecturalHighway",
+			"id": "7c084cb7ca1c4588bce111524b0f540b",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							9,
+							1.4
+						],
+						[
+							10,
+							1.6
+						],
+						[
+							11,
+							1.8
+						],
+						[
+							12,
+							2
+						],
+						[
+							13,
+							2.2
+						],
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-gap-width": 0,
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 30,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "县道",
+				"describe": "县道",
+				"source": "prefecturalHighway",
+				"groupname": "道路",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "prefecturalHighway",
+			"id": "dfe1b42cd6234733a3c61ab30d9b2a73",
+			"type": "line",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 31,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "国省道在建",
+				"describe": "国省道在建",
+				"source": "const_natProHighway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_natProHighway",
+			"id": "eca9e7692146456583f729cdbfbd6277",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							5,
+							0.2
+						],
+						[
+							6,
+							1
+						],
+						[
+							7,
+							1
+						],
+						[
+							8,
+							1.2
+						],
+						[
+							9,
+							1.4
+						],
+						[
+							10,
+							1.6
+						],
+						[
+							11,
+							1.8
+						],
+						[
+							12,
+							2
+						],
+						[
+							13,
+							2.2
+						],
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": {
+					"stops": [
+						[
+							7,
+							"#fff6d5"
+						],
+						[
+							8,
+							"#ffecba"
+						]
+					],
+					"base": 1
+				}
+			},
+			"layerInfo": {
+				"zindex": 32,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "国省道",
+				"describe": "国省道",
+				"source": "natProHighway",
+				"groupname": "道路",
+				"sourceminzoom": 7
+			},
+			"source": "Merge_2",
+			"source-layer": "natProHighway",
+			"id": "be96c6282ee84a51bb62e2493240efbe",
+			"type": "line",
+			"minzoom": 7
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 33,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "城市高速在建",
+				"describe": "城市高速在建",
+				"source": "const_city_expressway",
+				"groupname": "道路",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "const_city_expressway",
+			"id": "571aab630a6c4eda841da59ed5490b4e",
+			"type": "line",
+			"minzoom": 5
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							5,
+							0.2
+						],
+						[
+							6,
+							1
+						],
+						[
+							7,
+							1.2
+						],
+						[
+							8,
+							1.4
+						],
+						[
+							9,
+							1.6
+						],
+						[
+							10,
+							1.8
+						],
+						[
+							11,
+							2
+						],
+						[
+							12,
+							2.2
+						],
+						[
+							13,
+							2.4
+						],
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": {
+					"stops": [
+						[
+							5,
+							"#ffecba"
+						],
+						[
+							6,
+							"#fae3a2"
+						],
+						[
+							7,
+							"#fae3a2"
+						],
+						[
+							8,
+							"#ffd74d"
+						]
+					],
+					"base": 1
+				}
+			},
+			"layerInfo": {
+				"zindex": 34,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "城市高速",
+				"describe": "城市高速",
+				"source": "city_expressway",
+				"groupname": "道路",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "city_expressway",
+			"id": "b554857a090c4fc7a08339f33e69d6ba",
+			"type": "line",
+			"minzoom": 5
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#e4e4e4"
+			},
+			"layerInfo": {
+				"zindex": 35,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "高速在建",
+				"describe": "高速在建",
+				"source": "const_expressway",
+				"groupname": "道路",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "const_expressway",
+			"id": "fb12d0ebdc5440f2bbd480f7e2a466a1",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							5,
+							0.2
+						],
+						[
+							6,
+							1
+						],
+						[
+							7,
+							1.2
+						],
+						[
+							8,
+							1.4
+						],
+						[
+							9,
+							1.6
+						],
+						[
+							10,
+							1.8
+						],
+						[
+							11,
+							2
+						],
+						[
+							12,
+							2.2
+						],
+						[
+							13,
+							2.4
+						],
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": {
+					"stops": [
+						[
+							5,
+							"#ffecba"
+						],
+						[
+							6,
+							"#fae3a2"
+						],
+						[
+							7,
+							"#fae3a2"
+						],
+						[
+							8,
+							"#ffd74d"
+						]
+					],
+					"base": 1
+				}
+			},
+			"layerInfo": {
+				"zindex": 36,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "9ff708dc",
+				"name": "高速",
+				"describe": "高速",
+				"source": "expressway",
+				"groupname": "道路",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "expressway",
+			"id": "7dd001a5af244715a88230145050e409",
+			"type": "line",
+			"minzoom": 5
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">=",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1.6
+						],
+						[
+							15,
+							1.6
+						],
+						[
+							20,
+							8
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#6899c9"
+			},
+			"layerInfo": {
+				"zindex": 37,
+				"datatype": "line",
+				"prefix": "101013",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "轮渡立交",
+				"describe": "轮渡立交",
+				"source": "_zlevel_ferryRoad",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_ferryRoad",
+			"id": "b80635e24e8e4e7892aba3f1329d9a53",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 3,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 38,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "步行立交",
+				"describe": "步行立交",
+				"source": "_zlevel_pedestrianRoad",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_pedestrianRoad",
+			"id": "20991f067cf247dc99540f600d19af01",
+			"type": "line",
+			"minzoom": 17
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 4,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 39,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "其他道路立交",
+				"describe": "其他道路立交",
+				"source": "_zlevel_otherRoad",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_otherRoad",
+			"id": "8a3051ef7db745cd9e698c80b20a0209",
+			"type": "line",
+			"minzoom": 16
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 40,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "乡镇村立交",
+				"describe": "乡镇村立交",
+				"source": "_zlevel_countryHighway",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_countryHighway",
+			"id": "aaa46340cc914f93b5784b8fb37c0a78",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 41,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "县道立交",
+				"describe": "县道立交",
+				"source": "_zlevel_prefecturalHighway",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_prefecturalHighway",
+			"id": "ff8bbe52951449708dc8659175b595e3",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffecba"
+			},
+			"layerInfo": {
+				"zindex": 42,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "国省道立交",
+				"describe": "国省道立交",
+				"source": "_zlevel_natProHighway",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_natProHighway",
+			"id": "7564962d5b454bdaaec36de937685b44",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 43,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "城市高速立交",
+				"describe": "城市高速立交",
+				"source": "_zlevel_city_expressway",
+				"groupname": "立交1",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_city_expressway",
+			"id": "8a960972502d44758d946f55b5135ccb",
+			"type": "line",
+			"minzoom": 15
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"1"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 44,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "63b611fb",
+				"name": "高速立交",
+				"describe": "高速立交",
+				"source": "_zlevel_expressway",
+				"groupname": "立交1",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_expressway",
+			"id": "159fb09a03fc44f387c933c475802221",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 3,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 45,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "步行立交_2",
+				"describe": "步行立交",
+				"source": "_zlevel_pedestrianRoad",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_pedestrianRoad",
+			"id": "b81bc5855e4d42e4b2902cc1565752de",
+			"type": "line",
+			"minzoom": 17
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 4,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 46,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "其他道路立交_2",
+				"describe": "其他道路立交",
+				"source": "_zlevel_otherRoad",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_otherRoad",
+			"id": "d92a3586e2154a64b840508733115bae",
+			"type": "line",
+			"minzoom": 16
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 47,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "乡镇村立交_2",
+				"describe": "乡镇村立交",
+				"source": "_zlevel_countryHighway",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_countryHighway",
+			"id": "ec6d8e25cfbc42259f1b564487b8c489",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 48,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "县道立交_2",
+				"describe": "县道立交",
+				"source": "_zlevel_prefecturalHighway",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_prefecturalHighway",
+			"id": "ccc3893defdf41b9921d7415e839647b",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffecba"
+			},
+			"layerInfo": {
+				"zindex": 49,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "国省道立交_2",
+				"describe": "国省道立交",
+				"source": "_zlevel_natProHighway",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_natProHighway",
+			"id": "b3b5d0c705e648d5b88fccdaf95dbaa4",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 50,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "城市高速立交_2",
+				"describe": "城市高速立交",
+				"source": "_zlevel_city_expressway",
+				"groupname": "立交2",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_city_expressway",
+			"id": "945323860dbb4e618a274bbd96517e29",
+			"type": "line",
+			"minzoom": 15
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"2"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 51,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "ebe03a0d",
+				"name": "高速立交_2",
+				"describe": "高速立交",
+				"source": "_zlevel_expressway",
+				"groupname": "立交2",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_expressway",
+			"id": "439c61957d1243e780ff7f5d8526c346",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 3,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 52,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "步行立交_3",
+				"describe": "步行立交",
+				"source": "_zlevel_pedestrianRoad",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_pedestrianRoad",
+			"id": "4f0cda8cad4044fcb07cb2897701f39e",
+			"type": "line",
+			"minzoom": 17
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 4,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 53,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "其他道路立交_3",
+				"describe": "其他道路立交",
+				"source": "_zlevel_otherRoad",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_otherRoad",
+			"id": "eb329a8f05ad4134af84f990dec4f6d9",
+			"type": "line",
+			"minzoom": 16
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 54,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "乡镇村立交_3",
+				"describe": "乡镇村立交",
+				"source": "_zlevel_countryHighway",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_countryHighway",
+			"id": "bf7b535bea304feca5b2f26a313c2ea4",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 55,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "县道立交_3",
+				"describe": "县道立交",
+				"source": "_zlevel_prefecturalHighway",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_prefecturalHighway",
+			"id": "a9a3153ce21846018bb43417145ec649",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffecba"
+			},
+			"layerInfo": {
+				"zindex": 56,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "国省道立交_3",
+				"describe": "国省道立交",
+				"source": "_zlevel_natProHighway",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_natProHighway",
+			"id": "37f67d94d8c545a3af8860a94a1f0b02",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 57,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "城市高速立交_3",
+				"describe": "城市高速立交",
+				"source": "_zlevel_city_expressway",
+				"groupname": "立交3",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_city_expressway",
+			"id": "e8a6e1f527e24e239d8b4ca5254efa84",
+			"type": "line",
+			"minzoom": 15
+		},
+		{
+			"filter": [
+				"all",
+				[
+					"==",
+					"_zlevel",
+					"3"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 58,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "ede8ca09",
+				"name": "高速立交_3",
+				"describe": "高速立交",
+				"source": "_zlevel_expressway",
+				"groupname": "立交3",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_expressway",
+			"id": "cd73246ba2bd4ea09539f5f6e963cb85",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 3,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 59,
+				"datatype": "line",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "步行立交_4+",
+				"describe": "步行立交",
+				"source": "_zlevel_pedestrianRoad",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_pedestrianRoad",
+			"id": "a4fd5f643d794efdaa016e552290530b",
+			"type": "line",
+			"minzoom": 17
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": 4,
+				"line-color": "#f2f2f2"
+			},
+			"layerInfo": {
+				"zindex": 60,
+				"datatype": "line",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "其他道路立交_4+",
+				"describe": "其他道路立交",
+				"source": "_zlevel_otherRoad",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_otherRoad",
+			"id": "227f20e57423401dbf13e23f0c50426b",
+			"type": "line",
+			"minzoom": 16
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							1
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 61,
+				"datatype": "line",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "乡镇村立交_4+",
+				"describe": "乡镇村立交",
+				"source": "_zlevel_countryHighway",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_countryHighway",
+			"id": "9b86307ab71d4e2b9ffb9fff191dfb36",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 62,
+				"datatype": "line",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "县道立交_4+",
+				"describe": "县道立交",
+				"source": "_zlevel_prefecturalHighway",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_prefecturalHighway",
+			"id": "dad41def5ba94c1f954936924a72e372",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.4
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							5
+						],
+						[
+							17,
+							10
+						],
+						[
+							18,
+							20
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ffecba"
+			},
+			"layerInfo": {
+				"zindex": 63,
+				"datatype": "line",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "国省道立交_4+",
+				"describe": "国省道立交",
+				"source": "_zlevel_natProHighway",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_natProHighway",
+			"id": "44b69a70fae14e3cafcb2f025d85c0ab",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-translate": [
+					0,
+					1
+				],
+				"line-color": "#ffd74d"
+			},
+			"layerInfo": {
+				"zindex": 64,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "城市高速立交_4+",
+				"describe": "城市高速立交",
+				"source": "_zlevel_city_expressway",
+				"groupname": "立交4+",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_city_expressway",
+			"id": "75e0b9cb82724009a792d651122b56c2",
+			"type": "line",
+			"minzoom": 15
+		},
+		{
+			"filter": [
+				"all",
+				[
+					">",
+					"_zlevel",
+					"4"
+				]
+			],
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							14,
+							2.6
+						],
+						[
+							15,
+							4
+						],
+						[
+							16,
+							6
+						],
+						[
+							17,
+							12
+						],
+						[
+							18,
+							23
+						]
+					],
+					"base": 1
+				},
+				"line-color": {
+					"stops": [
+						[
+							1,
+							"#ffd74d"
+						],
+						[
+							20,
+							"#ffd74d"
+						]
+					],
+					"base": 1
+				}
+			},
+			"layerInfo": {
+				"zindex": 65,
+				"datatype": "line",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "3a515b12",
+				"name": "高速立交_4+",
+				"describe": "高速立交",
+				"source": "_zlevel_expressway",
+				"groupname": "立交4+",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "_zlevel_expressway",
+			"id": "dba14c49aabd46c68cf4e37c8350a610",
+			"type": "line",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-extrusion-height": {
+					"property": "levels",
+					"type": "identity"
+				},
+				"fill-extrusion-color": "#bbbbbb",
+				"fill-extrusion-base": 0,
+				"fill-extrusion-opacity": 0.3,
+				"fill-extrusion-translate-anchor": "map",
+				"fill-extrusion-translate": [
+					0,
+					0
+				]
+			},
+			"layerInfo": {
+				"zindex": 66,
+				"datatype": "extrusion",
+				"prefix": "106002",
+				"sourcemaxzoom": 20,
+				"groupid": "",
+				"name": "建筑物",
+				"describe": "建筑物",
+				"source": "building",
+				"groupname": "",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "building",
+			"id": "72820f4aefb44d9c8bd997a6e62acf2d",
+			"type": "fill-extrusion",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"visibility": "visible"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"fill-outline-color": "#ffffff",
+				"fill-color": {
+					"property": "color",
+					"type": "identity"
+				},
+				"fill-opacity": 0.5,
+				"fill-antialias": true,
+				"fill-translate-anchor": "viewport"
+			},
+			"layerInfo": {
+				"zindex": 67,
+				"datatype": "fill",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁站点面",
+				"describe": "地铁站点面",
+				"source": "subway_polygon",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_polygon",
+			"id": "1401c65ddaec4947a43e1891f11c4cc4",
+			"type": "fill",
+			"minzoom": 15.5
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "butt",
+				"line-join": "round"
+			},
+			"maxzoom": 20,
+			"paint": {
+				"line-translate-anchor": "viewport",
+				"line-width": {
+					"stops": [
+						[
+							10,
+							1.8
+						],
+						[
+							20,
+							4
+						]
+					],
+					"base": 1.2
+				},
+				"line-opacity": 0.6,
+				"line-color": {
+					"property": "color",
+					"type": "identity"
+				}
+			},
+			"layerInfo": {
+				"zindex": 68,
+				"datatype": "line",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁线路",
+				"describe": "地铁线路",
+				"source": "subway_line",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_line",
+			"id": "1696aa2d55a442f1a43765cd3c2227d4",
+			"type": "line",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": {
+					"property": "color",
+					"type": "identity"
+				},
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 69,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁线路名称",
+				"describe": "地铁线路名称",
+				"source": "subway_line",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_line",
+			"id": "375beebf06974525b6c7bf66b1ad9e7d",
+			"type": "symbol",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{code}",
+				"text-size": 13,
+				"text-anchor": "center",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "n-expressway-15-3",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-pitch-alignment": "viewport",
+				"text-offset": [
+					0,
+					0
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#fff956"
+			},
+			"layerInfo": {
+				"zindex": 70,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁出入口",
+				"describe": "地铁出入口",
+				"source": "subway_exit",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_exit",
+			"id": "4f7a704826fb4b56949e78c8b3276222",
+			"type": "symbol",
+			"minzoom": 15.5
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "metro_{istransfer}_{city_code}_16",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-pitch-alignment": "viewport",
+				"text-offset": [
+					0,
+					1.2
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-color": "#373737",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 71,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁站点_13",
+				"describe": "地铁站点",
+				"source": "subway_stop",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_stop",
+			"id": "5b9eb4942b9b48899019bcb76045775e",
+			"type": "symbol",
+			"minzoom": 13
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "metro-station",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-pitch-alignment": "viewport",
+				"text-offset": [
+					0,
+					1.2
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 13,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-color": "#373737",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 72,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "721a0f98",
+				"name": "地铁站点_11",
+				"describe": "地铁站点",
+				"source": "subway_stop",
+				"groupname": "地铁",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "subway_stop",
+			"id": "85ee14c1e0024611ad16c0c29e0931d4",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#6496c8"
+			},
+			"layerInfo": {
+				"zindex": 73,
+				"datatype": "symbol",
+				"prefix": "101013",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-轮渡",
+				"describe": "道路名-轮渡",
+				"source": "road_name_ferry_road",
+				"groupname": "道路名",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_ferry_road",
+			"id": "2aaccbf8730a4fd6ae22a52165d8bb27",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 74,
+				"datatype": "symbol",
+				"prefix": "101010",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-步行道",
+				"describe": "道路名-步行道",
+				"source": "road_name_pedestrian_road",
+				"groupname": "道路名",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_pedestrian_road",
+			"id": "ab13d9968bb349d78165d2381300201a",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 75,
+				"datatype": "symbol",
+				"prefix": "101008",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-其他道路",
+				"describe": "道路名-其他道路",
+				"source": "road_name_other_road",
+				"groupname": "道路名",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_other_road",
+			"id": "d4e4a13f94c84679bc2c1269dacfe3a4",
+			"type": "symbol",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 76,
+				"datatype": "symbol",
+				"prefix": "101007",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-乡镇道",
+				"describe": "道路名-乡镇道",
+				"source": "road_name_country_highway",
+				"groupname": "道路名",
+				"sourceminzoom": 12
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_country_highway",
+			"id": "a59d9c33f2474081a00a6f26b24be1cd",
+			"type": "symbol",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_bh}",
+				"text-size": 9,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "county_15_{brief_cnt}",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#000000",
+				"text-halo-width": 0
+			},
+			"layerInfo": {
+				"zindex": 77,
+				"datatype": "symbol",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-县道简称",
+				"describe": "道路名-县道简称",
+				"source": "road_name_countyway_brief",
+				"groupname": "道路名",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_countyway_brief",
+			"id": "c76c395a02a641d0a86782c82f29e13d",
+			"type": "symbol",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 78,
+				"datatype": "symbol",
+				"prefix": "101006",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-县道",
+				"describe": "道路名-县道",
+				"source": "road_name_prefectural_highway",
+				"groupname": "道路名",
+				"sourceminzoom": 12
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_prefectural_highway",
+			"id": "66472ee036ce473691b92b5b7dddd531",
+			"type": "symbol",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_bh}",
+				"text-size": 9,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "Provincial_15_{brief_cnt}",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000",
+				"text-color": "#ffffff",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 79,
+				"datatype": "symbol",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-省道简称",
+				"describe": "道路名-省道简称",
+				"source": "road_name_provincialway_brief",
+				"groupname": "道路名",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_provincialway_brief",
+			"id": "7e02a726e6834456868b33420919338b",
+			"type": "symbol",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_bh}",
+				"text-size": 9,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "state_15_{brief_cnt}",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000",
+				"text-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 80,
+				"datatype": "symbol",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-国道简称",
+				"describe": "道路名-国道简称",
+				"source": "road_name_stateway_brief",
+				"groupname": "道路名",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_stateway_brief",
+			"id": "9c87ed55cefa45fd9c01aef58b242672",
+			"type": "symbol",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_bh}",
+				"text-size": 9,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "national_15_{brief_cnt}",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000",
+				"text-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 81,
+				"datatype": "symbol",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-国道高速简称",
+				"describe": "道路名-国道高速简称",
+				"source": "road_name_nationalway_brief",
+				"groupname": "道路名",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_nationalway_brief",
+			"id": "f34b53cc541448b98ef0ec0c5d50045c",
+			"type": "symbol",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 82,
+				"datatype": "symbol",
+				"prefix": "101003101004",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-国省道",
+				"describe": "道路名-国省道",
+				"source": "road_name_nat_pro_highway",
+				"groupname": "道路名",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_nat_pro_highway",
+			"id": "be838282c03e4c6e85961e20abbdc94c",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_bh}",
+				"text-size": 9,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "expressway_15_{brief_cnt}",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000",
+				"text-color": "#ffffff"
+			},
+			"layerInfo": {
+				"zindex": 83,
+				"datatype": "symbol",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-高速简称",
+				"describe": "道路名-高速简称",
+				"source": "road_name_expressway_brief",
+				"groupname": "道路名",
+				"sourceminzoom": 6
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_expressway_brief",
+			"id": "08354af1b64e448487463e5d5ddfaa25",
+			"type": "symbol",
+			"minzoom": 6
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"text-rotate": 0,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"symbol-placement": "line",
+				"icon-ignore-placement": false,
+				"text-max-angle": 45
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 84,
+				"datatype": "symbol",
+				"prefix": "101001101002",
+				"sourcemaxzoom": 20,
+				"groupid": "d1f7ef75",
+				"name": "道路名-高速",
+				"describe": "道路名-高速",
+				"source": "road_name_expressway",
+				"groupname": "道路名",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "road_name_expressway",
+			"id": "e2f7b065345545229bef6f14ffeb43e6",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000"
+			},
+			"layerInfo": {
+				"zindex": 85,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "37d9b2c2",
+				"name": "出入口",
+				"describe": "出入口",
+				"source": "POI_passageWay",
+				"groupname": "道路设施",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_passageWay",
+			"id": "919f5bd0cf674f1f84ecac2352bcabcb",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"icon-image": "traffic_light_18",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 19.5,
+			"paint": {
+				"icon-color": "#ff0000"
+			},
+			"layerInfo": {
+				"zindex": 86,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 19.5,
+				"groupid": "37d9b2c2",
+				"name": "红绿灯",
+				"describe": "红绿灯",
+				"source": "traffic_light",
+				"groupname": "道路设施",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "traffic_light",
+			"id": "d9e5bf6a2bcd4e3daec972691f5bfb6c",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000"
+			},
+			"layerInfo": {
+				"zindex": 87,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "37d9b2c2",
+				"name": "停车场",
+				"describe": "停车场",
+				"source": "POI_parkingLot",
+				"groupname": "道路设施",
+				"sourceminzoom": 16
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_parkingLot",
+			"id": "bc7a3d254f2c47acbf33cf865cdf636b",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000"
+			},
+			"layerInfo": {
+				"zindex": 88,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "37d9b2c2",
+				"name": "高速设施",
+				"describe": "高速设施",
+				"source": "POI_highWay",
+				"groupname": "道路设施",
+				"sourceminzoom": 11
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_highWay",
+			"id": "d3a20986e9ff4aa4b579a0fb0c3134f0",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 89,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "37d9b2c2",
+				"name": "道路附属设施",
+				"describe": "道路附属设施",
+				"source": "POI_streetFurniture",
+				"groupname": "道路设施",
+				"sourceminzoom": 11
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_streetFurniture",
+			"id": "0189ea3e147a49f3981c7a4d28c41108",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-offset": [
+					0,
+					1
+				],
+				"text-size": 13,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#544946",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 90,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "37d9b2c2",
+				"name": "桥",
+				"describe": "桥",
+				"source": "POI_bridge",
+				"groupname": "道路设施",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_bridge",
+			"id": "37622b133a0c424b8f048cebc8c66e6e",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#666666",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 91,
+				"datatype": "symbol",
+				"prefix": "105013",
+				"sourcemaxzoom": 20,
+				"groupid": "",
+				"name": "批发零售",
+				"describe": "批发零售",
+				"source": "POI_wholesaleAndRetail",
+				"groupname": "",
+				"sourceminzoom": 16
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_wholesaleAndRetail",
+			"id": "b173daae87ae47e88c938e9127edd759",
+			"type": "symbol",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"icon-color": "#ff0000"
+			},
+			"layerInfo": {
+				"zindex": 92,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "f43e92fe",
+				"name": "卫生间",
+				"describe": "卫生间",
+				"source": "POI_toilet",
+				"groupname": "公共服务",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_toilet",
+			"id": "a9650a61d76149e788d3d9651915ea1a",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#666666",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 93,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "f43e92fe",
+				"name": "居民服务",
+				"describe": "居民服务",
+				"source": "POI_residentialServices",
+				"groupname": "公共服务",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_residentialServices",
+			"id": "1930445bb6e1426d86e47a5aeee5089c",
+			"type": "symbol",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#637b8a",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 94,
+				"datatype": "symbol",
+				"prefix": "105013",
+				"sourcemaxzoom": 20,
+				"groupid": "6ee94514",
+				"name": "公司企业",
+				"describe": "公司企业",
+				"source": "POI_company",
+				"groupname": "商务服务",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_company",
+			"id": "66832dff6d8341d98a4f90d611dc73ab",
+			"type": "symbol",
+			"minzoom": 15
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#637b8a",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 95,
+				"datatype": "symbol",
+				"prefix": "105013",
+				"sourcemaxzoom": 20,
+				"groupid": "6ee94514",
+				"name": "商业设施",
+				"describe": "商业设施",
+				"source": "POI_commercialFacility",
+				"groupname": "商务服务",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_commercialFacility",
+			"id": "6673e3bf79a54574ba9b868fdbf75a95",
+			"type": "symbol",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 96,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "cb106102",
+				"name": "金融服务",
+				"describe": "金融服务",
+				"source": "POI_financialService",
+				"groupname": "金融保险",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_financialService",
+			"id": "fc4a7ed5bc194bc78de47f3c7643239a",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 97,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "cb106102",
+				"name": "ATM",
+				"describe": "ATM",
+				"source": "POI_ATM",
+				"groupname": "金融保险",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_ATM",
+			"id": "e78beaf601374f27b1d5fdfddfee8db3",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 98,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "cb106102",
+				"name": "银行",
+				"describe": "银行",
+				"source": "POI_bank",
+				"groupname": "金融保险",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_bank",
+			"id": "5c88cce2a52642c0b87c01b23d6a2de9",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 99,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "",
+				"name": "运动场馆",
+				"describe": "运动场馆",
+				"source": "POI_sportsBuildings",
+				"groupname": "",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_sportsBuildings",
+			"id": "8adb8a35a81a42828e588bcd0d64cee7",
+			"type": "symbol",
+			"minzoom": 15
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-max-width": 10,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#516082",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 100,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "",
+				"name": "科教文化",
+				"describe": "科教文化",
+				"source": "POI_scienceAndEducationCulture",
+				"groupname": "",
+				"sourceminzoom": 11
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_scienceAndEducationCulture",
+			"id": "5f7952d086f34dc395704d82d0fd1509",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#637b8a",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 101,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "5b566b09",
+				"name": "居民住宅",
+				"describe": "居民住宅",
+				"source": "POI_residentialBuilding",
+				"groupname": "住宿",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_residentialBuilding",
+			"id": "81a341ea049a40b18ba29b6ed7ae07da",
+			"type": "symbol",
+			"minzoom": 15
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#637b8a",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 102,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "5b566b09",
+				"name": "酒店公寓",
+				"describe": "酒店公寓",
+				"source": "POI_hotelApartment",
+				"groupname": "住宿",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_hotelApartment",
+			"id": "3626979dcbef4c588d052ec9a6aa7b3e",
+			"type": "symbol",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#db884e",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 103,
+				"datatype": "symbol",
+				"prefix": "105014",
+				"sourcemaxzoom": 20,
+				"groupid": "f007ba36",
+				"name": "休闲餐饮",
+				"describe": "休闲餐饮",
+				"source": "POI_casualDining",
+				"groupname": "餐饮",
+				"sourceminzoom": 16
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_casualDining",
+			"id": "309d7cfe57244f0cb3f8660bb39aba90",
+			"type": "symbol",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#db884e",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 104,
+				"datatype": "symbol",
+				"prefix": "105014",
+				"sourcemaxzoom": 20,
+				"groupid": "f007ba36",
+				"name": "餐馆",
+				"describe": "餐馆",
+				"source": "POI_restaurant",
+				"groupname": "餐饮",
+				"sourceminzoom": 16
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_restaurant",
+			"id": "b4df97c461894fab8447d4c494492f4e",
+			"type": "symbol",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							0,
+							0.7
+						],
+						[
+							1,
+							0.7
+						],
+						[
+							2,
+							0.8
+						],
+						[
+							3,
+							1
+						],
+						[
+							8,
+							1.6
+						]
+					],
+					"base": 1
+				},
+				"line-dasharray": [
+					2,
+					2,
+					2,
+					2
+				],
+				"line-color": "#dd7f9e"
+			},
+			"layerInfo": {
+				"zindex": 105,
+				"datatype": "line",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "世界地图停火线",
+				"describe": "世界地图停火线",
+				"source": "world_ceasefire_line",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_ceasefire_line",
+			"id": "e803f7ae74d243d88dcc07833ed8f8e7",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							0,
+							0.7
+						],
+						[
+							1,
+							0.7
+						],
+						[
+							2,
+							0.8
+						],
+						[
+							3,
+							1
+						],
+						[
+							8,
+							1.6
+						]
+					],
+					"base": 1
+				},
+				"line-dasharray": [
+					2,
+					2,
+					2,
+					2
+				],
+				"line-color": "#c5bdb2"
+			},
+			"layerInfo": {
+				"zindex": 106,
+				"datatype": "line",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "世界地图未定国界",
+				"describe": "世界地图未定国界",
+				"source": "world_disputed_boundary",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_disputed_boundary",
+			"id": "c60686d917854b2c8317f22165fa66b6",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							0,
+							0.7
+						],
+						[
+							1,
+							0.7
+						],
+						[
+							2,
+							0.8
+						],
+						[
+							3,
+							1
+						],
+						[
+							8,
+							1.6
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ef5858"
+			},
+			"layerInfo": {
+				"zindex": 107,
+				"datatype": "line",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "世界地图国界",
+				"describe": "世界地图国界",
+				"source": "world_national_boundary",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_national_boundary",
+			"id": "9ac496be2fee4e23ad6910c30f38d174",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							5,
+							0.7
+						],
+						[
+							6,
+							0.8
+						],
+						[
+							7,
+							1.6
+						],
+						[
+							9,
+							1.6
+						],
+						[
+							20,
+							10
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#a6aec0"
+			},
+			"layerInfo": {
+				"zindex": 108,
+				"datatype": "line",
+				"prefix": "103003",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "省界",
+				"describe": "省界",
+				"source": "provincial_boundary",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "provincial_boundary",
+			"id": "07d0fd977835483a8ba50ce4c2d002ff",
+			"type": "line",
+			"minzoom": 3
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							3,
+							1.5
+						],
+						[
+							4,
+							1.5
+						],
+						[
+							5,
+							1.6
+						],
+						[
+							6,
+							1.8
+						],
+						[
+							7,
+							2
+						],
+						[
+							9,
+							2
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ef5858"
+			},
+			"layerInfo": {
+				"zindex": 109,
+				"datatype": "line",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "中国国界争议区域",
+				"describe": "国界争议区域",
+				"source": "disputed_national_boundary",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "disputed_national_boundary",
+			"id": "47d04708a4af435e8582238129449397",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							3,
+							1.5
+						],
+						[
+							4,
+							1.5
+						],
+						[
+							5,
+							1.6
+						],
+						[
+							6,
+							1.8
+						],
+						[
+							7,
+							2
+						],
+						[
+							9,
+							2
+						]
+					],
+					"base": 1
+				},
+				"line-color": "#ef5858"
+			},
+			"layerInfo": {
+				"zindex": 110,
+				"datatype": "line",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "中国国界",
+				"describe": "国界",
+				"source": "national_boundary",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "national_boundary",
+			"id": "4da5a2a61b0049358f5a3509a713ee9e",
+			"type": "line",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 8,
+			"paint": {
+				"line-width": {
+					"stops": [
+						[
+							5,
+							0.7
+						],
+						[
+							6,
+							0.8
+						],
+						[
+							7,
+							1.6
+						],
+						[
+							9,
+							1.6
+						],
+						[
+							20,
+							10
+						]
+					],
+					"base": 1
+				},
+				"line-dasharray": [
+					6,
+					3,
+					3,
+					4
+				],
+				"line-color": "#a6aec0"
+			},
+			"layerInfo": {
+				"zindex": 111,
+				"datatype": "line",
+				"prefix": "103009",
+				"sourcemaxzoom": 8.5,
+				"groupid": "8aaaa78b",
+				"name": "特别行政区",
+				"describe": "特别行政区",
+				"source": "special_administrative_region",
+				"groupname": "行政区划边界",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "special_administrative_region",
+			"id": "2affda3623fd4b3c8e813271d3fc8f1a",
+			"type": "line",
+			"minzoom": 3
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#a06471",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 112,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "fcd53add",
+				"name": "娱乐场所",
+				"describe": "娱乐场所",
+				"source": "POI_entertainmentVenues",
+				"groupname": "休闲娱乐",
+				"sourceminzoom": 17
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_entertainmentVenues",
+			"id": "b910719143c7435d8a5894c15b89869c",
+			"type": "symbol",
+			"minzoom": 17
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#635889",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 113,
+				"datatype": "symbol",
+				"prefix": "105013",
+				"sourcemaxzoom": 20,
+				"groupid": "fcd53add",
+				"name": "百货零售",
+				"describe": "百货零售",
+				"source": "POI_departmentStores",
+				"groupname": "休闲娱乐",
+				"sourceminzoom": 12
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_departmentStores",
+			"id": "f64cf033b42a4beda55ebada9b241155",
+			"type": "symbol",
+			"minzoom": 12
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 114,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "6ad91ec9",
+				"name": "宗教/国际组织",
+				"describe": "宗教/国际组织",
+				"source": "POI_religiousAndInternational",
+				"groupname": "政府机构",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_religiousAndInternational",
+			"id": "a8d1f1ba22204db5a7d905104d4f0348",
+			"type": "symbol",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 115,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "6ad91ec9",
+				"name": "公安机关",
+				"describe": "公安机关",
+				"source": "POI_publicSecurityOrgan",
+				"groupname": "政府机构",
+				"sourceminzoom": 14
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_publicSecurityOrgan",
+			"id": "598eabd069e4411c8eeb1da59fa3ba32",
+			"type": "symbol",
+			"minzoom": 14
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 19.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 116,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 19.5,
+				"groupid": "6ad91ec9",
+				"name": "政府机构",
+				"describe": "政府机构",
+				"source": "POI_government",
+				"groupname": "政府机构",
+				"sourceminzoom": 11
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_government",
+			"id": "131dfc3d6cfe4f579613f401fe0dd6ea",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#666666",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 117,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "ae6143e4",
+				"name": "医疗机构",
+				"describe": "医疗机构",
+				"source": "POI_medicalInstitutions",
+				"groupname": "医疗卫生",
+				"sourceminzoom": 16
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_medicalInstitutions",
+			"id": "4ab18833a4804f0bb39348519ebe43df",
+			"type": "symbol",
+			"minzoom": 16
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#666666",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 118,
+				"datatype": "symbol",
+				"prefix": "105011",
+				"sourcemaxzoom": 20,
+				"groupid": "ae6143e4",
+				"name": "医院诊所",
+				"describe": "医院诊所",
+				"source": "POI_medicalClinics",
+				"groupname": "医疗卫生",
+				"sourceminzoom": 15
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_medicalClinics",
+			"id": "50e60a3cd63e4628897299be91b9a9ab",
+			"type": "symbol",
+			"minzoom": 15
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#499464",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 119,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "bdafa932",
+				"name": "游乐园",
+				"describe": "游乐园",
+				"source": "POI_amusementPark",
+				"groupname": "风景名胜",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_amusementPark",
+			"id": "ba2a1b8be91443f5be4e4db23be321af",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#499464",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 120,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "bdafa932",
+				"name": "山",
+				"describe": "山",
+				"source": "POI_mountain",
+				"groupname": "风景名胜",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_mountain",
+			"id": "fcb04262cab74b8fbefab8aee4e43c29",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#499464",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 121,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "bdafa932",
+				"name": "公园广场",
+				"describe": "公园广场",
+				"source": "POI_parkPlace",
+				"groupname": "风景名胜",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_parkPlace",
+			"id": "6349bb88b58a427faf8b5e39009a9401",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#846846",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 122,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "bdafa932",
+				"name": "名胜古迹",
+				"describe": "名胜古迹",
+				"source": "POI_places0fInterest",
+				"groupname": "风景名胜",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_places0fInterest",
+			"id": "28343743af6b44098535a75b480cd676",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#499464",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 123,
+				"datatype": "symbol",
+				"prefix": "105016",
+				"sourcemaxzoom": 20,
+				"groupid": "bdafa932",
+				"name": "动植物园",
+				"describe": "动植物园",
+				"source": "POI_zoosArboretums",
+				"groupname": "风景名胜",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_zoosArboretums",
+			"id": "1b624a2513cf46f9a4fe4610a981c15f",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 124,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "1af5a884",
+				"name": "港口码头",
+				"describe": "港口码头",
+				"source": "POI_portWharf",
+				"groupname": "交通出行",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_portWharf",
+			"id": "3642ffce508841aeadebc507fc1e61fc",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-anchor": "top",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 125,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "1af5a884",
+				"name": "汽车站",
+				"describe": "汽车站",
+				"source": "POI_busStation",
+				"groupname": "交通出行",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_busStation",
+			"id": "17c39c388e8a4f1eafeb95a2a55aafe3",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 126,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "1af5a884",
+				"name": "火车站",
+				"describe": "火车站",
+				"source": "POI_railwayStation",
+				"groupname": "交通出行",
+				"sourceminzoom": 9
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_railwayStation",
+			"id": "1cac3314b87c485c870dc5009f6968ed",
+			"type": "symbol",
+			"minzoom": 9
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "poi_code_{kindcode}_18",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#424242",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 127,
+				"datatype": "symbol",
+				"prefix": "105015",
+				"sourcemaxzoom": 20,
+				"groupid": "1af5a884",
+				"name": "机场",
+				"describe": "机场",
+				"source": "POI_airport",
+				"groupname": "交通出行",
+				"sourceminzoom": 8
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_airport",
+			"id": "0e00c8706f58472abf3e58698f3e1a61",
+			"type": "symbol",
+			"minzoom": 8
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 13,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#4c4c4c",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 128,
+				"datatype": "symbol",
+				"prefix": "103008",
+				"sourcemaxzoom": 20,
+				"groupid": "881c1074",
+				"name": "敏感岛屿",
+				"describe": "敏感岛屿",
+				"source": "admin_flag_sensitive_island",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 4
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_sensitive_island",
+			"id": "ab7f318445c441d39661a20b986d5b1a",
+			"type": "symbol",
+			"minzoom": 4
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 11,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 20,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 129,
+				"datatype": "symbol",
+				"prefix": "103007",
+				"sourcemaxzoom": 20,
+				"groupid": "881c1074",
+				"name": "村庄",
+				"describe": "村庄",
+				"source": "vill_tonw_cz",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 7
+			},
+			"source": "Merge_2",
+			"source-layer": "vill_tonw_cz",
+			"id": "bf4f9e8574974f27b92f0c35f987de0f",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 14,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-image": "marker-15-6",
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 19.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484"
+			},
+			"layerInfo": {
+				"zindex": 130,
+				"datatype": "symbol",
+				"prefix": "103003",
+				"sourcemaxzoom": 19.5,
+				"groupid": "881c1074",
+				"name": "藏南",
+				"describe": "藏南",
+				"source": "POI_zangnan",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 7
+			},
+			"source": "Merge_2",
+			"source-layer": "POI_zangnan",
+			"id": "5959cde295f445b69564d46e25db105e",
+			"type": "symbol",
+			"minzoom": 7
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 11,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 12,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 131,
+				"datatype": "symbol",
+				"prefix": "103010",
+				"sourcemaxzoom": 20,
+				"groupid": "881c1074",
+				"name": "街道",
+				"describe": "街道",
+				"source": "vill_town_st",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 10
+			},
+			"source": "Merge_2",
+			"source-layer": "vill_town_st",
+			"id": "e9257dd2a479465a9607ce6cd79d2a01",
+			"type": "symbol",
+			"minzoom": 11
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 11,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 19.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 132,
+				"datatype": "symbol",
+				"prefix": "",
+				"sourcemaxzoom": 19.5,
+				"groupid": "881c1074",
+				"name": "乡镇",
+				"describe": "乡镇",
+				"source": "vill_tonw_xz",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 7
+			},
+			"source": "Merge_2",
+			"source-layer": "vill_tonw_xz",
+			"id": "ad0c619bf48e4967bcf46ba297e56eb7",
+			"type": "symbol",
+			"minzoom": 10
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": 12,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 11,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1,
+				"text-translate": [
+					0,
+					15
+				]
+			},
+			"layerInfo": {
+				"zindex": 133,
+				"datatype": "symbol",
+				"prefix": "103005",
+				"sourcemaxzoom": 20,
+				"groupid": "881c1074",
+				"name": "区县",
+				"describe": "区县",
+				"source": "admin_flag_county",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 7
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_county",
+			"id": "05a09ce159124a77b647b2a0ddf507c6",
+			"type": "symbol",
+			"minzoom": 7
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": {
+					"stops": [
+						[
+							5,
+							13
+						],
+						[
+							7,
+							15
+						]
+					],
+					"base": 1
+				},
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 10,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 134,
+				"datatype": "symbol",
+				"prefix": "103004",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "盟/自治州",
+				"describe": "盟/自治州",
+				"source": "admin_flag_zizhi",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_zizhi",
+			"id": "c66e6812f83d43e7879630ad1ad044f5",
+			"type": "symbol",
+			"minzoom": 5
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_brief}",
+				"text-size": {
+					"stops": [
+						[
+							5,
+							11
+						],
+						[
+							7,
+							13
+						]
+					],
+					"base": 1
+				},
+				"text-anchor": "top",
+				"text-allow-overlap": false,
+				"icon-size": 0.6,
+				"icon-image": "ciecle_brown_8",
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					-1.7
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 10,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#848484",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 135,
+				"datatype": "symbol",
+				"prefix": "103004",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "地级市",
+				"describe": "地级市",
+				"source": "admin_flag_city",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 5
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_city",
+			"id": "a88fe33c179d479297705903365f91ec",
+			"type": "symbol",
+			"minzoom": 5
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_brief}",
+				"text-size": {
+					"stops": [
+						[
+							3,
+							8
+						],
+						[
+							4,
+							12
+						],
+						[
+							5,
+							14
+						],
+						[
+							6,
+							16
+						],
+						[
+							7,
+							16
+						],
+						[
+							8,
+							16
+						],
+						[
+							9,
+							16
+						]
+					],
+					"base": 1
+				},
+				"text-anchor": "bottom",
+				"text-allow-overlap": false,
+				"icon-text-fit": "none",
+				"icon-size": 1,
+				"icon-ignore-placement": false,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-justify": "center",
+				"text-offset": [
+					0,
+					-0.3
+				],
+				"icon-offset": [
+					0,
+					0
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 4,
+			"paint": {
+				"icon-translate": [
+					0,
+					0
+				],
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#676767",
+				"text-halo-width": 1,
+				"text-translate": [
+					0,
+					0
+				]
+			},
+			"layerInfo": {
+				"zindex": 136,
+				"datatype": "symbol",
+				"prefix": "103003",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "首都-北京",
+				"describe": "首都-北京",
+				"source": "admin_flag_bejing",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_bejing",
+			"id": "d91be0395c9446088765dbc02145f807",
+			"type": "symbol",
+			"minzoom": 3.5
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": true,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_zh}",
+				"text-size": {
+					"stops": [
+						[
+							4,
+							11
+						],
+						[
+							7,
+							13
+						]
+					],
+					"base": 1
+				},
+				"text-anchor": "right",
+				"text-allow-overlap": false,
+				"icon-image": "circle_red_8",
+				"icon-ignore-placement": false,
+				"icon-optional": true,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					-0.5,
+					1.5
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 10,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#373737",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 137,
+				"datatype": "symbol",
+				"prefix": "103009",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "澳门",
+				"describe": "澳门",
+				"source": "admin_flag_aomen",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 4
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_aomen",
+			"id": "b2e4f1a7a754487987596cdafd2e9dbf",
+			"type": "symbol",
+			"minzoom": 4
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": true,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_brief}",
+				"text-size": {
+					"stops": [
+						[
+							4,
+							11
+						],
+						[
+							7,
+							13
+						]
+					],
+					"base": 1
+				},
+				"text-anchor": "left",
+				"text-allow-overlap": false,
+				"icon-image": "circle_red_8",
+				"icon-ignore-placement": true,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					1,
+					0
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 10,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#373737",
+				"text-halo-width": 1,
+				"text-translate": [
+					0,
+					0
+				]
+			},
+			"layerInfo": {
+				"zindex": 138,
+				"datatype": "symbol",
+				"prefix": "103009",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "香港",
+				"describe": "香港",
+				"source": "admin_flag_xianggang",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 4
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_xianggang",
+			"id": "b5a7cb934f614549a8c690a2804dabea",
+			"type": "symbol",
+			"minzoom": 4
+		},
+		{
+			"layout": {
+				"icon-allow-overlap": true,
+				"text-optional": false,
+				"visibility": "visible",
+				"text-field": "{name_brief}",
+				"text-size": {
+					"stops": [
+						[
+							4,
+							11
+						],
+						[
+							7,
+							13
+						]
+					],
+					"base": 1
+				},
+				"text-allow-overlap": false,
+				"icon-size": 1,
+				"icon-image": "circle_red_8",
+				"icon-ignore-placement": true,
+				"icon-optional": false,
+				"symbol-avoid-edges": false,
+				"text-offset": [
+					0,
+					1
+				],
+				"text-ignore-placement": false
+			},
+			"maxzoom": 10,
+			"paint": {
+				"icon-translate": [
+					0,
+					0
+				],
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#373737",
+				"text-halo-width": 1,
+				"text-translate": [
+					0,
+					0
+				]
+			},
+			"layerInfo": {
+				"zindex": 139,
+				"datatype": "symbol",
+				"prefix": "103004",
+				"sourcemaxzoom": 11.5,
+				"groupid": "881c1074",
+				"name": "省会直辖市",
+				"describe": "省会直辖市",
+				"source": "admin_flag_province",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 4
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_province",
+			"id": "b1d37e5ab3b0467bbfb1a88b872a7f61",
+			"type": "symbol",
+			"minzoom": 4
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"visibility": "visible",
+				"text-field": "{name_brief}",
+				"text-offset": [
+					0,
+					0
+				],
+				"text-size": 10,
+				"text-allow-overlap": true,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 4.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"icon-color": "#ff0000",
+				"text-color": "#676767",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 140,
+				"datatype": "symbol",
+				"prefix": "103003",
+				"sourcemaxzoom": 4.5,
+				"groupid": "881c1074",
+				"name": "省名",
+				"describe": "省名",
+				"source": "admin_flag_province_name",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "admin_flag_province_name",
+			"id": "775de99bf45248f4a215a0a1bd8b8d1c",
+			"type": "symbol",
+			"minzoom": 3.5
+		},
+		{
+			"layout": {
+				"visibility": "visible",
+				"line-cap": "round",
+				"line-join": "round"
+			},
+			"maxzoom": 4.5,
+			"paint": {
+				"line-width": 1,
+				"line-color": "#4a4a4a"
+			},
+			"layerInfo": {
+				"zindex": 141,
+				"datatype": "line",
+				"prefix": "103009",
+				"sourcemaxzoom": 4.5,
+				"groupid": "881c1074",
+				"name": "香港澳门引线",
+				"describe": "香港澳门引线",
+				"source": "leadLine",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 3
+			},
+			"source": "Merge_2",
+			"source-layer": "leadLine",
+			"id": "9f815ed6afad4690b635da55e294c5b1",
+			"type": "line",
+			"minzoom": 3.5
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-optional": false,
+				"text-pitch-alignment": "viewport",
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": {
+					"stops": [
+						[
+							0,
+							11
+						],
+						[
+							1,
+							9
+						],
+						[
+							2,
+							11
+						],
+						[
+							3,
+							12
+						],
+						[
+							8,
+							13
+						]
+					],
+					"base": 1
+				},
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-size": 0,
+				"icon-ignore-placement": false,
+				"icon-optional": false
+			},
+			"maxzoom": 8,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-color": "#676767",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 142,
+				"datatype": "symbol",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "881c1074",
+				"name": "世界国家名称",
+				"describe": "世界国家名称",
+				"source": "world_country_name",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_country_name",
+			"id": "cebff03a0d664d9b97c838f80eb4d3e0",
+			"type": "symbol",
+			"minzoom": 2
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-pitch-alignment": "viewport",
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": 16,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 8.5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-color": "#5a8ec1",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 143,
+				"datatype": "symbol",
+				"prefix": "103008",
+				"sourcemaxzoom": 8.5,
+				"groupid": "881c1074",
+				"name": "大洋名",
+				"describe": "大洋名",
+				"source": "world_ocean_name",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_ocean_name",
+			"id": "0731fd953a744f318b66907736d6ff28",
+			"type": "symbol",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": false,
+				"icon-allow-overlap": false,
+				"text-pitch-alignment": "viewport",
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-size": 18,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 2,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-halo-width": 1
+			},
+			"layerInfo": {
+				"zindex": 144,
+				"datatype": "symbol",
+				"prefix": "103008",
+				"sourcemaxzoom": 8.5,
+				"groupid": "881c1074",
+				"name": "大洲名",
+				"describe": "大洲名",
+				"source": "world_continent_name",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "world_continent_name",
+			"id": "6471871190d1416e9e23ff9d5807554d",
+			"type": "symbol",
+			"minzoom": 0
+		},
+		{
+			"layout": {
+				"symbol-avoid-edges": true,
+				"icon-allow-overlap": false,
+				"text-pitch-alignment": "viewport",
+				"visibility": "visible",
+				"text-field": "{name}",
+				"text-offset": [
+					1,
+					-3
+				],
+				"text-rotation-alignment": "viewport",
+				"text-size": 14,
+				"text-allow-overlap": false,
+				"text-ignore-placement": false,
+				"icon-size": 0,
+				"icon-ignore-placement": false
+			},
+			"maxzoom": 5,
+			"paint": {
+				"text-halo-color": "#ffffff",
+				"text-translate-anchor": "viewport",
+				"icon-color": "#ff0000",
+				"text-color": "#d0021b",
+				"text-halo-width": 1.2
+			},
+			"layerInfo": {
+				"zindex": 145,
+				"datatype": "symbol",
+				"prefix": "103002",
+				"sourcemaxzoom": 8.5,
+				"groupid": "881c1074",
+				"name": "国家-中华人民共和国",
+				"describe": "国家-中华人民共和国",
+				"source": "china_country_name",
+				"groupname": "行政区划代表点",
+				"sourceminzoom": 0
+			},
+			"source": "Merge_2",
+			"source-layer": "china_country_name",
+			"id": "70c7734b3b234b35835c253d3f2be32c",
+			"type": "symbol",
+			"minzoom": 2
+		}
+	],	
+	"version": 8
+}

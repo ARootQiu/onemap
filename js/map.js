@@ -6,13 +6,14 @@ var drawTool = null;
 var styleMap = {};
 var curSelectedNodeData = null;
 var selectDate = null;
+var historyServer = "http://192.168.200.210/geowinmap";
 function loadmap() {
     GeowinSetRTLTextPlugin();
 
     map = new CMap({
         container: "map",
         center: [105.09338, 33.1348],
-        style: "data/streets.json",
+        style: "styles/streets.json",
         zoom: 0.6,
         minZoom: 0,
         maxZoom: 17,
@@ -44,7 +45,7 @@ function loadmap() {
     map.addControl(drawTool);
 
     this.vue.expandedKeys = [3]
-	this.vue.$refs.layerTree.setCheckedKeys([3]);
+    this.vue.$refs.layerTree.setCheckedKeys([3]);
 
 }
 function test() {
@@ -184,56 +185,35 @@ function CGetMapUrl(options) {
     return list;
 }
 
-function setDefaultStyle() {
-    var style = {
-        "version": 8,
-        "name": "defaultstyle",
-        "sources": {},
-        "layers": [
-            {
-                "id": "background",
-                "type": "background",
-                "paint": {
-                    "background-color": "rgb(40,60,31)"
-                }
-            }
-        ],
-        "visibility": "public",
-        "id": "sate",
-        "draft": false
-    }
-
-    map.setStyle(style);
-}
 
 
 var selectDate = null;
 function getHistoryRasterDates() {
-    
-    var url = CGeowin.AbrPath + "/gee/getcentertiledates.it?l=" + Math.round(map.getZoom()) + "&center=" + map.getCenter().lng.toFixed(5) + "," + map.getCenter().lat.toFixed(5);
+
+    var url = historyServer + "/gee/getcentertiledates.it?l=" + Math.round(map.getZoom()) + "&center=" + map.getCenter().lng.toFixed(5) + "," + map.getCenter().lat.toFixed(5);
     CGetData(url, function (data) {
         data = CParseObj(data);
         let [dates, formmatDate, len] = [[], '', Math.floor(data.length / 10)]
-        for (var i = 1; i < data.length; i++) {
-            dates.push(new Date(Date.parse(data[i])))
-        }
+
         // 整理时间轴label
-        for (var i = 0; i < data.length; i++) {
-            if (data[i] != null) ;
-                formmatDate = data[i].getFullYear() + "-" + add2Length(data[i].getMonth() + 1)  // 根据返回数据格式化时间（yyyy-MM格式）
-            if (i == data.length - 1 || (i % 10 == 0 && len != i / 10 ))    // 判断添加slider ticks
+        for (var i = 1; i < data.length; i++) {
+            var iDate = new Date(Date.parse(data[i]));
+            if (iDate == null) continue;
+
+            if (i == 1 || i == data.length - 1 || (i % 10 == 0 && len != i / 10))    // 判断添加slider ticks
                 dates.push({
-                    value: formmatDate,
-                    legend: formmatDate
-                })
-            else 
-                dates.push({value: formmatDate})
+                    value: iDate,
+                    legend: iDate.getFullYear()
+                });
+            else
+                dates.push({ value: iDate });
         }
+        console.log(dates)
         var appE = document.querySelector('[ng-controller=MainCtrl]');
         var $scope = angular.element(appE).scope();
         if (selectDate == null)
-            selectDate = dates[dates.length - 1];
-        addHistoryRaster(selectDate);
+            selectDate = dates[dates.length - 1].value;
+        // addHistoryRaster(selectDate);
         $scope.slider_dates = {
             value: selectDate,
             options: {
@@ -245,7 +225,7 @@ function getHistoryRasterDates() {
                 },
                 onChange: function (id, newValue, highValue, pointerType) {
                     selectDate = newValue;
-                    addHistoryRaster(newValue);
+                    //addHistoryRaster(newValue);
                 },
                 // 时间已在上面格式化完成，无需再次转换
                 // translate: function (date) {
@@ -271,7 +251,7 @@ function add2Length(num) {
 function addHistoryRaster(date) {
     var date = selectDate.getFullYear() + "-" + add2Length(selectDate.getMonth() + 1) + "-" + add2Length(selectDate.getDate());
 
-    curSelectedNodeData.url = CGeowin.AbrPath + "/gee/gethistorytile.it?x={x}&y={y}&l={z}&date=" + date;
+    curSelectedNodeData.url = historyServer + "/gee/gethistorytile.it?x={x}&y={y}&l={z}&date=" + date;
 
     addLayer(curSelectedNodeData);
 }
@@ -593,3 +573,58 @@ function setCountryBounds(xmin, ymin, xmax, ymax, code) {
     region.addBoundary(code, null, true);
 }
 
+function changeMapType(item) {
+    if (item == "矢量") {
+        map.setStyle("styles/streets.json");
+    }
+    else if (item == "影像") {
+        setDefaultStyle();
+
+        map.once('styledata', () => {
+            var nodedata = {
+                "type": "raster",
+                "layerid": "sate",
+                "id": "影像"
+            }
+            addLayer(nodedata);
+        });
+
+
+    }
+    else if (item == "历史") {
+        setDefaultStyle();
+
+        map.once('styledata', () => {
+            map.on("moveend", getHistoryRasterDates);
+            map.on("zoomend", getHistoryRasterDates);
+            $('.bottom-panel').removeClass('hide');
+            getHistoryRasterDates();
+        });
+
+
+
+    }
+}
+
+
+function setDefaultStyle() {
+    var style = {
+        "version": 8,
+        "name": "defaultstyle",
+        "sources": {},
+        "layers": [
+            {
+                "id": "background",
+                "type": "background",
+                "paint": {
+                    "background-color": "rgb(40,60,31)"
+                }
+            }
+        ],
+        "visibility": "public",
+        "id": "sate",
+        "draft": false
+    }
+
+    map.setStyle(style);
+}

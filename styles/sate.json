@@ -1,0 +1,33 @@
+{
+    "version": 8,
+    "name": "sate",
+    "sources": {
+        "sate-src": {
+            "tilename":"sate",
+            "type": "raster",
+			"tileSize":256,
+			"minzoom":0,
+			"maxzoom":18
+        }
+    },
+    
+    "layers": [
+        {
+			"id": "background",
+			"type": "background",
+			"paint": {
+				"background-color": "rgb(40,60,31)"
+			}
+		},
+		{ 
+			"id": "satelayer",
+			"type": "raster",
+			"source": "sate-src",
+			"minzoom":0,
+			"maxzoom":18
+		}
+    ],
+    "visibility": "public",
+    "id": "sate",
+    "draft": false
+}
