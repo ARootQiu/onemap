@@ -188,54 +188,103 @@ function CGetMapUrl(options) {
 
 
 var selectDate = null;
+var historyImageDates = [];
 function getHistoryRasterDates() {
 
     var url = historyServer + "/gee/getcentertiledates.it?l=" + Math.round(map.getZoom()) + "&center=" + map.getCenter().lng.toFixed(5) + "," + map.getCenter().lat.toFixed(5);
     CGetData(url, function (data) {
         data = CParseObj(data);
-        let [dates, formmatDate, len] = [[], '', Math.floor(data.length / 10)]
+        historyImageDates = [];
+        formatHistoryDateAndLabel(data);
 
-        // 整理时间轴label
-        for (var i = 1; i < data.length; i++) {
-            var iDate = new Date(Date.parse(data[i]));
-            if (iDate == null) continue;
-
-            if (i == 1 || i == data.length - 1 || (i % 10 == 0 && len != i / 10))    // 判断添加slider ticks
-                dates.push({
-                    value: iDate,
-                    legend: iDate.getFullYear()
-                });
-            else
-                dates.push({ value: iDate });
-        }
-        console.log(dates)
         var appE = document.querySelector('[ng-controller=MainCtrl]');
         var $scope = angular.element(appE).scope();
         if (selectDate == null)
-            selectDate = dates[dates.length - 1].value;
-        // addHistoryRaster(selectDate);
+            selectDate = historyImageDates[historyImageDates.length - 1].value;
+
+        addHistoryRaster(selectDate);
         $scope.slider_dates = {
             value: selectDate,
             options: {
-                stepsArray: dates,
+                stepsArray: historyImageDates,
                 showTicks: true,
                 showTicksValues: true,
                 ticksValuesTooltip: function (v) {
 
                 },
+                customValueToPosition: function (val, minVal, maxVal) {
+                    var years = historyImageDates[maxVal].value.getFullYear() - historyImageDates[minVal].value.getFullYear();
+                    var iYear = historyImageDates[val].value.getFullYear() - historyImageDates[minVal].value.getFullYear();
+                    return iYear / years;
+                },
+                customPositionToValue: function (percent, minVal, maxVal) {
+                    var years = historyImageDates[maxVal].value.getFullYear() - historyImageDates[minVal].value.getFullYear();
+                    var iYear = Math.floor(historyImageDates[minVal].value.getFullYear() + years * percent);
+
+                    for (var i = 0; i < historyImageDates.length; i++) {
+                        if (historyImageDates[i].value.getFullYear() < iYear) continue;
+                        return i;
+                    }
+
+                },
                 onChange: function (id, newValue, highValue, pointerType) {
                     selectDate = newValue;
-                    //addHistoryRaster(newValue);
+                    addHistoryRaster(newValue);
                 },
                 // 时间已在上面格式化完成，无需再次转换
-                // translate: function (date) {
-                //     return getYearMonth(date);
-                // },
+                translate: function (date) {
+                    return getYearMonth(date);
+                },
             }
         };
         $scope.$apply();
     })
 }
+
+function getCenterYear() {
+    var maxDate = historyImageDates[historyImageDates.length - 1];
+    var minDate = historyImageDates[0];
+    var max = maxDate.value.getFullYear();
+    var min = minDate.value.getFullYear();
+
+    return Math.floor((max - min) / 2 + min);
+}
+
+function formatHistoryDateAndLabel(data) {
+    historyImageDates = [];
+    // 整理时间轴label
+    for (var i = 1; i < data.length; i++) {
+        var iDate = new Date(Date.parse(data[i]));
+        if (iDate == null) continue;
+
+        if (i == 1 || i == data.length - 1)   // 判断添加slider ticks
+            historyImageDates.push({
+                value: iDate,
+                legend: getYearMonth(iDate)
+            });
+        else
+            historyImageDates.push({ value: iDate });
+    }
+    var centerYear = getCenterYear();
+
+    for (var i = 0; i < historyImageDates.length; i++) {
+        if (historyImageDates[i].value.getFullYear() < centerYear) continue;
+        historyImageDates[i].lengend = getYearMonth(historyImageDates[i].value);
+        break;
+    }
+}
+
+function getCenterDate() {
+    var centerYear = getCenterDate();
+    for (var i = 0; i < historyImageDates.length; i++) {
+        if (historyImageDates[i].value.getFullYear() < centerYear) continue;
+        historyImageDates[i].lengend = getYearMonth(historyImageDates[i].value);
+        break;
+    }
+}
+
+
+
 
 function getYearMonth(date) {
     if (date != null) return date.getFullYear() + "-" + add2Length(date.getMonth() + 1);
@@ -250,10 +299,14 @@ function add2Length(num) {
 
 function addHistoryRaster(date) {
     var date = selectDate.getFullYear() + "-" + add2Length(selectDate.getMonth() + 1) + "-" + add2Length(selectDate.getDate());
+    var nodedata = {
+        url: historyServer + "/gee/gethistorytile.it?x={x}&y={y}&l={z}&date=" + date,
+        id: 'gee-history',
+        type: "raster",
+        special: "times.sate"
+    }
 
-    curSelectedNodeData.url = historyServer + "/gee/gethistorytile.it?x={x}&y={y}&l={z}&date=" + date;
-
-    addLayer(curSelectedNodeData);
+    addLayer(nodedata);
 }
 
 
@@ -606,6 +659,14 @@ function changeMapType(item) {
     }
 }
 
+function addTerrain() {
+    this.vue.is3D = !this.vue.is3D;
+    if (this.vue.is3D)
+        map.addTerrain();
+    else
+        map.removeTerrain();
+
+}
 
 function setDefaultStyle() {
     var style = {
@@ -630,5 +691,5 @@ function setDefaultStyle() {
 }
 
 function changeMapTerrain() {
-    this.vue.is3D = !this.vue.is3D;
+
 }
