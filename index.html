@@ -156,17 +156,86 @@
 		<main>
 			<div class="mapContent" id="map"></div>
 			<div class="tool-panel panels">
-				<div>
-					<div class="curr-city__text">中国</div>
-				</div>
-				<div><i class="iconfont icon-icon_tianjia"></i></div>
-				<div><i class="iconfont icon-jianshao"></i></div>
-				<div><i class="iconfont icon-quanping"></i></div>
-				<div><i class="iconfont icon-shanchu"></i></div>
-				<div><i class="iconfont icon-pin"></i></div>
-				<div><i class="iconfont icon-mian"></i></div>
-				<div><i class="iconfont icon-huaduobianxing"></i></div>
-				<div><i class="iconfont icon-Chat-"></i></div>
+				<ul class="t_ul clearfix">
+					<li class="t_li t_city">
+						<div class="t_li_link clearfix">
+							<span class="v_icon icon_city"></span>
+							<span class="fl">中国</span>
+						</div>
+					</li>
+					<li class="t_li t_gj">
+						<div class="t_li_link clearfix">
+							<span class="v_icon icon_gongju"></span>
+							<span class="fl">工具</span>
+						</div>
+						<div class="v_icon2"></div>
+						<ul class="gongju_list toggleShow none" style="display: none;">
+							<li onclick="calLength();">
+								<span class="toolcl gj_icon"></span><span class="tool_text">测量</span>
+							</li>
+							<li onclick="calArea();">
+								<span class="toolcm gj_icon"></span><span class="tool_text">测面</span>
+							</li>
+							<li onclick="drawPoint();">
+								<span class="toolbd gj_icon"></span><span class="tool_text">标点</span>
+							</li>
+							<li onclick="drawLine();">
+								<span class="toolbx gj_icon"></span><span class="tool_text">标线</span>
+							</li>
+							<li onclick="drawPoly();">
+								<span class="toolbm gj_icon"></span><span class="tool_text">标面</span>
+							</li>
+							<li onclick="clearMap();">
+								<span class="gj_icon icon_qingkong"></span><span class="tool_text">清空</span>
+							</li>
+							<li onclick="print();">
+								<span class="tooldy gj_icon"></span><span class="tool_text">打印</span>
+							</li>
+						</ul>
+					</li>
+					<li class="t_li t_sl">
+						<span class="t_li_link clearfix" onclick="setStyle(lastVectorStyle)">
+							<span class="v_icon icon_sate"></span>
+							<span class="fl">矢量</span>
+						</span>
+						<div class="v_icon2"></div>
+						<ul class="shiliang_list toggleShow none">                    
+							<li onclick="setStyle('streets')">
+								<span class="tooldh gj_icon"></span><span class="tool_text">街道风格</span>
+							</li>
+							<li onclick="setStyle('dark')">
+								<span class="toolhy gj_icon"></span><span class="tool_text">黑夜风格</span>
+							</li>
+							<li onclick="setStyle('light')">
+								<span class="toolml gj_icon"></span><span class="tool_text">明亮风格</span>
+							</li>
+							<li onclick="setStyle('district')">
+								<span class="toolzq gj_icon"></span><span class="tool_text">政区图</span>
+							</li>
+							<li onclick="setStyle('tdtmap')">
+								<span class="tooltdt gj_icon"></span><span class="tool_text">天地图</span>
+							</li>
+						</ul>
+					</li>
+					<li class="t_li t_yx">
+						 <span class="t_li_link clearfix" onclick="setStyle(lastSateStyle)">
+							<span class="v_icon icon_vector"></span>
+							<span class="fl">影像</span>
+						</span>
+						<div class="v_icon2"></div>
+						<ul class="yingxiang_list toggleShow none">
+							<li onclick="setStyle('mixsate')">
+								<span class="toolhh gj_icon"></span><span class="tool_text">混合影像</span>
+							</li>                    
+							<li onclick="setStyle('dmsate')">
+								<span class="tooldm gj_icon"></span><span class="tool_text ">地名影像</span>
+							</li>
+							<li onclick="setStyle('sate')">
+								<span class="toolyx gj_icon"></span><span class="tool_text">影像</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 
 
@@ -327,6 +396,26 @@
 				$('.tool-panel > div, .layer-panel > div:not(.layer-terrain), .setting-panel > div').on('click', function (e) {
 					$(e.currentTarget).addClass('active').siblings().removeClass('active')
 				})
+				$('.t_li').on('click', function(e) {
+					$(e.currentTarget).siblings('.t_li').children('.toggleShow').slideUp()
+					$(e.currentTarget).siblings('.t_li').find('.t_li_link span.fl').removeClass('active')
+					$(e.currentTarget).find('.toggleShow').slideToggle()
+					$(e.currentTarget).find('span.fl').addClass('active')
+				})
+
+				$('.t_city').on('click', function(e) {
+					$('.t_li').find('span.fl').removeClass('active').parent().siblings('.toggleShow ').slideUp()
+					$(e.currentTarget).find('span.fl').addClass('active')
+				})
+
+				$('.toggleShow li').on('click', function(e) {
+					// 阻止冒泡
+					e.stopPropagation()
+					$('.toggleShow li .tool_text').removeClass('active')
+					$(e.currentTarget).find('.tool_text').addClass('active')
+					$(e.currentTarget).parent().slideUp()
+				})
+
 				let _this = this
 				$.getJSON({
 					url: "data/layerdata.json",

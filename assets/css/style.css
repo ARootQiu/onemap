@@ -163,7 +163,7 @@ nav {
 .layer-panel {
 	position: absolute;
 	bottom: 5px;
-	right: 60px;
+	right: 0;
 	display: flex;
 	z-index: 3;
 	padding: 0 4px;
@@ -229,15 +229,15 @@ nav {
 .tool-panel {
 	position: absolute;
 	right: 2px;
-	bottom: 20px;
-	background-color: rgba(0, 17, 56, 1);
+	top: -50px;
+	background-color: rgba(0, 23, 65, 1);
 	box-shadow: 0px 0px 16px 0px rgba(58, 58, 58, 0.59),
 		inset 0px 0px 6px 1px rgba(16, 108, 222, 0.22),
 		inset 0px 0px 13px 1px rgba(0, 114, 255, 0.8);
 	border-radius: 5px;
 }
 
-.tool-panel .iconfont {
+/* .tool-panel .iconfont {
 	color: #FFFFFF;
 }
 
@@ -250,13 +250,308 @@ nav {
 .tool-panel>div:hover,
 .tool-panel>div.active {
 	background-color: #003ba8;
+} */
+
+
+.t_ul {
+	padding: 0 10px;
+	margin: 0;
 }
 
+.t_li {
+	padding: 0 8px;
+	position: relative;
+	display: block;
+	float: left;
+	list-style: none;
+	line-height: 34px;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.t_city {
+	position: relative;
+	display: block;
+	float: left;
+	list-style: none;
+	line-height: 34px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.v_icon1 {
+	display: inline-block;
+	line-height: 17px;
+	height: 34px;
+	background: #fff;
+	text-decoration: none;
+	vertical-align: middle;
+	float: left;
+}
+
+.v_icon {
+	width: 16px;
+	float: left;
+	margin-right: 6px;
+	margin-top: 10px;
+	display: inline-block;
+	background-image: url(../img/icon_1.png);
+	background-repeat: no-repeat;
+	height: 16px;
+}
+
+
+.active {
+	color: #2f87eb !important;
+}
+
+.icon_gongju {
+	background-position: -84px 0;
+}
+
+.active .icon_gongju_active {
+	background-position: -187px 0;
+}
+
+.icon_city {
+	background-position: -279px -328px;
+	;
+}
+
+.icon_fenxiang {
+	background-position: -108px 0;
+}
+
+.icon_vector {
+	background-position: -225px -327px;
+}
+
+.icon_sate {
+	background-position: -253px -327px;
+}
+
+.icon_qingkong {
+	background-position: -138px 0;
+}
+
+.icon_quanping {
+	background-position: -164px 0;
+}
+
+.v_icon2 {
+	width: 15px;
+	height: 30px;
+	background-image: url(../img/icon_1.png);
+	background-repeat: no-repeat;
+	background-position: -2px -18px;
+	padding-left: 5px;
+	float: left;
+	margin-top: 4px;
+}
+
+.fl {
+	float: left;
+}
+
+.city_tc {
+	width: 373px;
+	background: #fff;
+	position: absolute;
+	z-index: 1001;
+	cursor: auto;
+	top: 38px;
+	left: 0;
+	box-shadow: 0px 3px 15px #929292;
+	display: none;
+}
+
+.v_tit {
+	margin: 0px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.v_sp1 {
+	color: #333;
+}
+
+.v_sp2 {
+	color: #5497de;
+	text-decoration: underline;
+	margin-left: 15px;
+}
+
+.none {
+	display: none;
+}
+
+.city_list {
+	overflow: hidden;
+}
+
+.city_tit {
+	font-weight: bold;
+	color: #666;
+	font-size: 14px;
+	width: 42px;
+	margin-top: 5px;
+	float: left;
+	line-height: 22px;
+	cursor: pointer;
+	padding-left: 9px;
+	text-align: center;
+}
+
+.word_list li {
+	text-decoration: none;
+	font-size: 12px;
+	color: #5193e8;
+	margin-right: 6px;
+	cursor: pointer;
+	padding: 0 5px;
+	float: left;
+}
+
+.gongju_list {
+	overflow: hidden;
+	width: 80%;
+	background-color: rgba(0, 23, 65, 0.9);
+	position: absolute;
+	top: 34px;
+	left: 8px;
+}
+
+.gongju_list li {
+	line-height: 24px;
+	height: 24px;
+}
+
+.tool_text {
+	float: left;
+	font-size: 12px;
+	font-style: normal;
+}
+
+.gj_icon {
+	margin-left: 6px;
+	margin-top: 5px;
+	float: left;
+	margin-right: 6px;
+	display: inline-block;
+	background-image: url(../img/icon_1.png);
+	background-repeat: no-repeat;
+	width: 19px;
+	height: 16px;
+}
+
+.toolcl {
+	background-position: -295px 0;
+}
+
+.toolcm {
+	background-position: -324px 0;
+}
+
+.toolbd {
+	background-position: -41px -25px;
+}
+
+.toolbx {
+	background-position: -65px -26px;
+}
+
+.toolbm {
+	background-position: -91px -26px;
+}
+
+.tooldy {
+	background-position: -355px 0;
+}
+
+.tooldsx {
+	background-position: -385px 0;
+}
+
+.toolty {
+	background-position: -414px 0;
+}
+
+.tooldh {
+	background-position: -368px -328px;
+}
+
+.toolhy {
+	background-position: -394px -328px;
+}
+
+.toolml {
+	background-position: -421px -328px;
+}
+
+.toolzq {
+	background-position: -447px -328px;
+}
+
+.tooltdt {
+	background-position: -474px -328px;
+}
+
+.toolhh {
+	background-position: -507px -328px;
+}
+
+.tooldm {
+	background-position: -533px -328px;
+}
+
+.toolyx {
+	background-position: -559px -328px;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.shiliang_list {
+	overflow: hidden;
+	width: 100%;
+	background-color: rgba(0, 23, 65, 0.9);
+	position: absolute;
+	top: 34px;
+	left: 0;
+}
+
+.shiliang_list li {
+	line-height: 24px;
+	height: 24px;
+}
+.yingxiang_list {
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(0, 23, 65, 0.9);
+    position: absolute;
+    top: 34px;
+    left: 0;
+}
+.yingxiang_list li {
+	line-height: 24px;
+	height: 24px;
+}
+.t_li_link{
+	float:left;
+}
+
+/* right panel */
 .right-panel {
 	width: 13rem;
 	position: absolute;
-	right: 3rem;
-	top: -50px;
+	right: 5px;
+	top: 0;
 	z-index: 8;
 }
 
