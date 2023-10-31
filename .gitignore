@@ -16,3 +16,8 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+.vs/slnx.sqlite
+.vs/ProjectSettings.json
+.vs/onemap/FileContentIndex/read.lock
+.vs/onemap/FileContentIndex/98d7b109-7b9e-4cfc-bcd3-1d6143320cb9.vsidx
+.vs/onemap/FileContentIndex/f1a9cdd8-b167-40fc-8af2-e74906f79e34.vsidx

@@ -169,15 +169,7 @@
 				<div><i class="iconfont icon-Chat-"></i></div>
 			</div>
 
-			<div class="setting-panel panels">
-				<div><i class="iconfont icon-diqiu"></i></div>
-				<div><i class="iconfont icon-icon-"></i></div>
-				<div><i class="iconfont icon-layers"></i></div>
-				<div><i class="iconfont icon-weizhi"></i></div>
-				<div><i class="iconfont icon-tubiao"></i></div>
-				<div><i class="iconfont icon-zengjia"></i></div>
-				<div><i class="iconfont icon-jian_sekuai"></i></div>
-			</div>
+
 
 			<div class="right-panel panels">
 				<div class="d-between">
@@ -250,8 +242,10 @@
 				<div class="layer-sl active" @click="changeMapType('矢量')"><span>矢量</span></div>
 				<div class="layer-yx" @click="changeMapType('影像')"><span>影像</span></div>
 				<div class="layer-ls" @click="changeMapType('历史')"><span>历史</span></div>
-				<div class="layer-terrain" :class="{act: is3D}" @click="changeMapTerrain"><span>地形</span></div>
+				<div class="layer-terrain" :class="{act: is3D}" @click="addTerrain"><span>地形</span></div>
 			</div>
+
+			<div class="history-date hide">影像时间:{{ currentHistoryDate }}</div>
 		</main>
 	</div>
 	<script type="module">
@@ -316,6 +310,7 @@
 					// 默认展开节点
 					expandedKeys: [],
 					is3D: false,	// 是否选择地形
+					currentHistoryDate: null,	// 当前选择的历史时间
 				}
 			},
 
@@ -550,7 +545,7 @@
 </body>
 <style>
 	.rzslider {
-		margin: 25px 0 25px 0;
+		margin: 33px 0;
 	}
 
 	.rzslider .rz-pointer {
@@ -566,7 +561,7 @@
 
 	.rzslider .rz-bubble,
 	.rzslider .rz-bubble.rz-limit {
-		color: #317cf0;
+		color: #46a5fc;
 		bottom: 10px;
 	}
 

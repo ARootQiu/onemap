@@ -7,14 +7,6 @@
 	},
 	{
 		"pId": 1,
-		"name": "矢量瓦片",
-		"id": 3,
-		"layerid": "mp_vector",
-		"type": "vector",
-		"style": "data/streets.json"
-	},
-	{
-		"pId": 1,
 		"name": "天地图",
 		"id": 4,
 		"nocheck": true
